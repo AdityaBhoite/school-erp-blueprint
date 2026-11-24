@@ -104,3 +104,13 @@ After the Stage 1 upload, the project continuation assessment added **forward-pl
 - **Privacy posture unchanged — clean.** These are the project's own written analysis citing research document names, figures, application route paths, and role-level numbers already present throughout `01_EDUVATE_RESEARCH/`. No credentials, tokens, emails, personal data, or proprietary source were introduced.
 - **Manifest regenerated** to cover the new/changed content. New tracked total: **136** (134 content + this audit + the manifest). The manifest header and all unchanged entries are byte-identical; only the six affected rows changed. Hashes are computed on the committed (LF) content and verified to match the git blobs.
 - This section records a documentation/planning update; the Stage 1 upload record in §1–§6 is unchanged.
+
+## 8. Stage 1B — remaining-Eduvate completeness pass (2026-11-24)
+
+Added `01_EDUVATE_RESEARCH/14_EDUVATE_COMPLETENESS/` (7 files): `COMPLETENESS_ASSESSMENT.md`, `FINANCE_APPLICATION_ANALYSIS.md`, `CRM_APPLICATION_ANALYSIS.md`, `REMAINING_ROUTE_RESULTS.csv`, `ROLE_ACCESS_REQUIREMENTS.md`, `WORKFLOW_EVIDENCE_GAPS.md`, `FINAL_EDUVATE_COVERAGE.md`; and updated `CONTINUATION_ASSESSMENT.md` + `PROJECT_ROADMAP.md`.
+
+- **No new research of the original was run:** no repeat of the 1,954-file JS analysis, the 6,577-entry catalogue, the route maps, or the 408-route crawl. The CRM and finance-service analyses were **synthesised from the existing derived CSVs**.
+- **One read-only external probe** was performed: a single GET of the finance SPA root (`orchids.finance.letseduvate.com/`), which returned 404 — no data, no login, no enumeration. No other external request was made; the browser extension was not connected.
+- **Privacy scan of the 7 new files — CLEAN:** no emails, user identifiers, tokens, cookies, `ws://` debugger ids, or 9+ digit runs. Content is value-free route/endpoint *names*, E017 role labels/levels, and the project's own analysis.
+- **Two captures remain deferred** (pending the owner's authenticated browser): the 18-route + finance-frontend crawl, and per-role crawls. No credentials were requested or stored.
+- Manifest regenerated to cover the additions.

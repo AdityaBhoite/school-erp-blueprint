@@ -7,6 +7,10 @@
 
 ---
 
+> **Stage 1B update (2026-11-24):** The remaining-Eduvate investigation ran without repeating any completed work. New analysis lives in [`01_EDUVATE_RESEARCH/14_EDUVATE_COMPLETENESS/`](01_EDUVATE_RESEARCH/14_EDUVATE_COMPLETENESS/): the **CRM** application (610 endpoints) and the **finance service** API (151 endpoints) were synthesised from existing metadata; a precise **role access-requirements matrix** and a **workflow evidence-gap** classification were produced; the **18 routes** were predicted and queued; and the **finance SPA** frontend was determined to need an authenticated handoff (its root is 404 anonymously). Two read-only captures remain **pending an authenticated browser** (the extension is not connected): the 18-route + finance-frontend crawl, and per-role crawls. See `14_EDUVATE_COMPLETENESS/COMPLETENESS_ASSESSMENT.md` and `FINAL_EDUVATE_COVERAGE.md`. **Stage 2 stays held.**
+
+---
+
 ## A. Existing research — verified as canonical
 
 The canonical evidence base is `D:\REA Claude\orchids-erp-research` (149 files, untouched), mirrored read-only into this repo under [`01_EDUVATE_RESEARCH/`](01_EDUVATE_RESEARCH/) (126 files). It was produced by a read-only, legitimate-access investigation using one **Teacher (ERP level 11)** account, with strict evidence labelling (OBSERVED / STATIC / INFERRED / PROPOSED / UNKNOWN).

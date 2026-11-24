@@ -37,6 +37,8 @@ Still open **within** Stage 1 (requires a different evidence type, not more of t
 
 None of these blocks Stage 3; they would raise fidelity on the surfaces the teacher account could not reach.
 
+**Stage 1B (2026-11-24):** a completeness pass (`01_EDUVATE_RESEARCH/14_EDUVATE_COMPLETENESS/`) synthesised the **CRM** (610 endpoints) and **finance service** (151 endpoints) surfaces from existing metadata, produced a **role access-requirements matrix** and a **workflow evidence-gap** classification, predicted/queued the **18 routes**, and determined the **finance SPA** frontend needs an authenticated handoff. Two read-only captures remain **pending an authenticated browser** (18-route + finance-frontend crawl; per-role crawls). See `14_EDUVATE_COMPLETENESS/FINAL_EDUVATE_COVERAGE.md`. Stage 2 is held until the owner approves the Eduvate investigation as sufficiently complete.
+
 ---
 
 ## Stage 2 — Existing build analysis  ·  *status: framework ready, pending location*
