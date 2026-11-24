@@ -70,12 +70,19 @@ The copied documentation includes the final documentation erratum and all correc
 - `01_EDUVATE_RESEARCH/13_AUTONOMOUS_DEEP_ANALYSIS/CALLSITE_COUNT_ERRATUM.md` is present.
 - `COVERAGE_REPORT.md`, `API_METHOD_RESOLUTION.md`, `APPLICATION_CHUNK_GRAPH.md`, and `04_BACKEND_ANALYSIS/api_inventory.md` carry the reproducible **8,530** exported call-site records / **10,006** catalog `callsite_count` figures (same 5,364 endpoints); the non-reproducible "11,146" is no longer presented as a verified total. The HTTP-method resolution figure (**5,427** / 82.5%) is preserved.
 
-## 5. Git & GitHub
+## 5. Git & GitHub — **completed**
 
-- **git:** initialised in the staging directory (branch `main`); all files staged; local commit created.
+- **git:** initialised in the staging directory (branch `main`); all files staged; local commit `802afa259c05300009d9af1959d72d222802b9ad` created.
 - **Author:** the repository's configured git identity (`git config user.name` / `user.email`).
-- **No force push; no overwrite of any existing remote.**
-- **GitHub CLI (`gh`):** **not installed** on this machine (checked PATH and common install locations). Remote repository creation and push therefore **could not be completed autonomously** and are **pending** the user establishing GitHub authentication (see the session report). No password or token was requested or stored.
+- **No force push; no overwrite of any existing remote** (the target repository did not previously exist — verified via `gh repo view`, which returned "Could not resolve to a Repository").
+- **GitHub CLI (`gh`):** installed (2.105.0). Authenticated interactively by the user via the web browser device-code flow as **AdityaBhoite** (token scopes: `repo, read:org, workflow, gist`). No password or token was requested or stored by the assistant.
+- **Remote created and pushed:** `gh repo create school-erp-blueprint --private --source . --remote origin --push`.
+  - **Repository:** <https://github.com/AdityaBhoite/school-erp-blueprint>
+  - **Visibility:** PRIVATE (confirmed by `gh repo view`: `isPrivate: true`).
+  - **Owner:** `AdityaBhoite`.
+  - **Pushed commit:** `802afa259c05300009d9af1959d72d222802b9ad` — verified identical on `origin/main` (GitHub API `.sha`).
+  - **Files on remote tree:** 135 (matches local).
+- This audit was updated **after** a successful push to record the outcome; that update is a second commit on top of the pushed `802afa2`. The SHA-256 manifest is unaffected (this file is excluded from its own hashing).
 
 ## 6. Verification performed
 - Canonical research directory file count unchanged (149) — original left untouched.
