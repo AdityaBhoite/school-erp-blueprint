@@ -1,0 +1,96 @@
+# ───────────────────────────────────────────────────────────────
+# school-erp-blueprint — strict ignore list
+# Defence-in-depth: the staged research was already vetted clean,
+# but these patterns prevent sensitive or proprietary material from
+# ever being committed in future.
+# ───────────────────────────────────────────────────────────────
+
+# ── Secrets & credentials ──
+*.env
+.env*
+*.pem
+*.key
+*.ppk
+*.p12
+*.pfx
+*.keystore
+*.jks
+*.crt
+*.cer
+id_rsa*
+*apikey*
+*api_key*
+*.secret
+secrets.*
+credentials.*
+*.credentials
+service-account*.json
+*.token
+auth_token*
+access_token*
+refresh_token*
+
+# ── Cookies / sessions / browser-debug identifiers ──
+*.cookie
+cookies*.txt
+*cookies*.json
+*devtools*
+*webSocketDebugger*
+*ws-endpoint*
+*browser-debug*
+cdp-*.json
+
+# ── Raw network / session captures ──
+*.har
+*.pcap
+*.pcapng
+*.saz
+raw_capture*/
+*_raw_capture*
+
+# ── Proprietary application source / shipped bundles ──
+# (No such files are committed; this blocks accidental future adds.)
+*.js
+*.mjs
+*.cjs
+*.jsx
+*.ts
+*.tsx
+*.map
+*.min.js
+*.bundle.js
+assets/**/*.js
+app_bundles/
+js_corpus/
+
+# ── Build output / dependencies / temp / scratch ──
+node_modules/
+dist/
+build/
+.cache/
+coverage/
+tmp/
+temp/
+scratch/
+scratchpad/
+*.tmp
+*.log
+*.pyc
+__pycache__/
+.venv/
+venv/
+
+# ── OS / editor cruft ──
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*~
+
+# NOTE ON IMAGES: image files are NOT globally ignored because the
+# curated, manually-redacted screenshots under
+# 01_EDUVATE_RESEARCH/09_VISUAL_EVIDENCE/ are intentional research
+# evidence. Any NEW screenshot must be visually confirmed redacted
+# (no student/employee PII, no faces, no IDs) before it is added.

@@ -1,0 +1,4468 @@
+{
+ "note": "Value-free API shapes captured by a read-only CDP tour of the teacher account (E016). No header values, cookies, tokens or JSON values were recorded. Keys resembling identifiers were redacted.",
+ "screens": {
+  "erp_academic_communication": {
+   "requested": "/erp/academic-communication",
+   "final": "/erp/user-profile",
+   "denied": true,
+   "error": null
+  },
+  "erp_academic_improvement__daily_log": {
+   "requested": "/erp/academic-improvement/daily-log",
+   "final": "/erp/user-profile",
+   "denied": true,
+   "error": null
+  },
+  "erp_acms__assessments": {
+   "requested": "/erp/acms/assessments",
+   "final": "/erp/acms/assessments",
+   "denied": false,
+   "error": null
+  },
+  "erp_acms__blueprints": {
+   "requested": "/erp/acms/blueprints",
+   "final": "/erp/user-profile",
+   "denied": true,
+   "error": null
+  },
+  "erp_acms__calendar": {
+   "requested": "/erp/acms/calendar",
+   "final": "/erp/acms/calendar",
+   "denied": false,
+   "error": null
+  },
+  "erp_acms__dashboard": {
+   "requested": "/erp/acms/dashboard",
+   "final": "/erp/user-profile",
+   "denied": true,
+   "error": null
+  },
+  "erp_acms__my_lesson_plans": {
+   "requested": "/erp/acms/my-lesson-plans",
+   "final": "/erp/user-profile",
+   "denied": true,
+   "error": null
+  },
+  "erp_acms__performance_analytics": {
+   "requested": "/erp/acms/performance-analytics",
+   "final": "/erp/user-profile",
+   "denied": true,
+   "error": null
+  },
+  "erp_acms__questions": {
+   "requested": "/erp/acms/questions",
+   "final": "/erp/user-profile",
+   "denied": true,
+   "error": null
+  },
+  "erp_announcement": {
+   "requested": "/erp/announcement",
+   "final": "/erp/announcement",
+   "denied": false,
+   "error": null
+  },
+  "erp_assessment__clicker": {
+   "requested": "/erp/assessment/clicker",
+   "final": "/erp/user-profile",
+   "denied": true,
+   "error": null
+  },
+  "erp_assessment__report_card": {
+   "requested": "/erp/assessment/report-card",
+   "final": "/erp/assessment/report-card",
+   "denied": false,
+   "error": null
+  },
+  "erp_assessment__test": {
+   "requested": "/erp/assessment/test",
+   "final": "/erp/assessment/test",
+   "denied": false,
+   "error": null
+  },
+  "erp_assessment": {
+   "requested": "/erp/assessment",
+   "final": "/erp/user-profile",
+   "denied": true,
+   "error": null
+  },
+  "erp_assessment_reports": {
+   "requested": "/erp/assessment-reports",
+   "final": "/erp/assessment-reports",
+   "denied": false,
+   "error": null
+  },
+  "erp_attendance": {
+   "requested": "/erp/attendance",
+   "final": "/erp/attendance",
+   "denied": false,
+   "error": null
+  },
+  "erp_audio_analysis__my_insights": {
+   "requested": "/erp/audio-analysis/my-insights",
+   "final": "/erp/user-profile",
+   "denied": true,
+   "error": null
+  },
+  "erp_board_prep": {
+   "requested": "/erp/board-prep",
+   "final": "/erp/board-prep",
+   "denied": false,
+   "error": null
+  },
+  "erp_bug_tracker__dashboard": {
+   "requested": "/erp/bug-tracker/dashboard",
+   "final": "/erp/user-profile",
+   "denied": true,
+   "error": null
+  },
+  "erp_bytelearn__lnd__my_learning": {
+   "requested": "/erp/bytelearn/lnd/my-learning",
+   "final": "/erp/user-profile",
+   "denied": true,
+   "error": null
+  },
+  "erp_bytelearn": {
+   "requested": "/erp/bytelearn",
+   "final": "/erp/user-profile",
+   "denied": true,
+   "error": null
+  },
+  "erp_calendar_hub": {
+   "requested": "/erp/calendar-hub",
+   "final": "/erp/user-profile",
+   "denied": true,
+   "error": null
+  },
+  "erp_calendar": {
+   "requested": "/erp/calendar",
+   "final": "/erp/calendar",
+   "denied": false,
+   "error": null
+  },
+  "erp_chat": {
+   "requested": "/erp/chat",
+   "final": "/erp/chat",
+   "denied": false,
+   "error": null
+  },
+  "erp_communication_inbox": {
+   "requested": "/erp/communication-inbox",
+   "final": "/erp/communication-inbox",
+   "denied": false,
+   "error": null
+  },
+  "erp_diary": {
+   "requested": "/erp/diary",
+   "final": "/erp/diary",
+   "denied": false,
+   "error": null
+  },
+  "erp_event_manager": {
+   "requested": "/erp/event-manager",
+   "final": "/erp/user-profile",
+   "denied": true,
+   "error": null
+  },
+  "erp_feature_request__dashboard": {
+   "requested": "/erp/feature-request/dashboard",
+   "final": "/erp/user-profile",
+   "denied": true,
+   "error": null
+  },
+  "erp_feedback": {
+   "requested": "/erp/feedback",
+   "final": "/erp/user-profile",
+   "denied": true,
+   "error": null
+  },
+  "erp_goal_tracker": {
+   "requested": "/erp/goal-tracker",
+   "final": "/erp/goal-tracker",
+   "denied": false,
+   "error": null
+  },
+  "erp_homework_dashboard": {
+   "requested": "/erp/homework-dashboard",
+   "final": "/erp/user-profile",
+   "denied": true,
+   "error": null
+  },
+  "erp_homework": {
+   "requested": "/erp/homework",
+   "final": "/erp/homework",
+   "denied": false,
+   "error": null
+  },
+  "erp_house_system__directory": {
+   "requested": "/erp/house-system/directory",
+   "final": "/erp/user-profile",
+   "denied": true,
+   "error": null
+  },
+  "erp_house_system__leaderboard": {
+   "requested": "/erp/house-system/leaderboard",
+   "final": "/erp/user-profile",
+   "denied": true,
+   "error": null
+  },
+  "erp_meeting_scheduler": {
+   "requested": "/erp/meeting-scheduler",
+   "final": "/erp/meeting-scheduler",
+   "denied": false,
+   "error": null
+  },
+  "erp_myschoolgate": {
+   "requested": "/erp/myschoolgate",
+   "final": "/erp/user-profile",
+   "denied": true,
+   "error": null
+  },
+  "erp_observation": {
+   "requested": "/erp/observation",
+   "final": "/erp/user-profile",
+   "denied": true,
+   "error": null
+  },
+  "erp_online_books": {
+   "requested": "/erp/online-books",
+   "final": "/erp/online-books",
+   "denied": false,
+   "error": null
+  },
+  "erp_online_class": {
+   "requested": "/erp/online-class",
+   "final": "/erp/online-class",
+   "denied": false,
+   "error": null
+  },
+  "erp_school_clicker": {
+   "requested": "/erp/school-clicker",
+   "final": "/erp/school-clicker",
+   "denied": false,
+   "error": null
+  },
+  "erp_school_wall": {
+   "requested": "/erp/school-wall",
+   "final": "/erp/school-wall",
+   "denied": false,
+   "error": null
+  },
+  "erp_teacher_observation": {
+   "requested": "/erp/teacher-observation",
+   "final": "/erp/user-profile",
+   "denied": true,
+   "error": null
+  },
+  "erp_test_module": {
+   "requested": "/erp/test-module",
+   "final": "/erp/user-profile",
+   "denied": true,
+   "error": null
+  },
+  "erp_test_result": {
+   "requested": "/erp/test-result",
+   "final": "/erp/test-result",
+   "denied": false,
+   "error": null
+  },
+  "erp_ticket_dashboard": {
+   "requested": "/erp/ticket-dashboard",
+   "final": "/erp/user-profile",
+   "denied": true,
+   "error": null
+  },
+  "erp_ticket": {
+   "requested": "/erp/ticket",
+   "final": "/erp/user-profile",
+   "denied": true,
+   "error": null
+  },
+  "erp_timetable": {
+   "requested": "/erp/timetable",
+   "final": "/erp/timetable",
+   "denied": false,
+   "error": null
+  },
+  "erp_upload_marks": {
+   "requested": "/erp/upload-marks",
+   "final": "/erp/upload-marks",
+   "denied": false,
+   "error": null
+  },
+  "erp_user_profile": {
+   "requested": "/erp/user-profile",
+   "final": "/erp/user-profile",
+   "denied": false,
+   "error": null
+  },
+  "erp_video_monitoring__my_observations": {
+   "requested": "/erp/video-monitoring/my-observations",
+   "final": "/erp/user-profile",
+   "denied": true,
+   "error": null
+  },
+  "erp_work_tracker__dashboard": {
+   "requested": "/erp/work-tracker/dashboard",
+   "final": "/erp/user-profile",
+   "denied": true,
+   "error": null
+  },
+  "hr_asset__your_assets": {
+   "requested": "/recruitment/asset/your-assets",
+   "final": "/recruitment/asset/your-assets",
+   "denied": false,
+   "error": null
+  },
+  "hr_attendance": {
+   "requested": "/recruitment/attendance",
+   "final": "/recruitment/attendance",
+   "denied": false,
+   "error": null
+  },
+  "hr_course__my_courses": {
+   "requested": "/recruitment/course/my-courses",
+   "final": "/recruitment/course/my-courses",
+   "denied": false,
+   "error": null
+  },
+  "hr_document_center": {
+   "requested": "/recruitment/document-center",
+   "final": "/recruitment/document-center",
+   "denied": false,
+   "error": null
+  },
+  "hr_employee_grievance__my_tickets": {
+   "requested": "/recruitment/employee-grievance/my-tickets",
+   "final": "/recruitment/employee-grievance/my-tickets",
+   "denied": false,
+   "error": null
+  },
+  "hr_growth_action_plan__my_plan": {
+   "requested": "/recruitment/growth-action-plan/my-plan",
+   "final": "/recruitment/growth-action-plan/my-plan",
+   "denied": false,
+   "error": null
+  },
+  "hr_holiday_calendar": {
+   "requested": "/recruitment/holiday-calendar",
+   "final": "/recruitment/holiday-calendar",
+   "denied": false,
+   "error": null
+  },
+  "hr_leave_apply": {
+   "requested": "/recruitment/leave-apply",
+   "final": "/recruitment/leave-apply",
+   "denied": false,
+   "error": null
+  },
+  "hr_my_referral": {
+   "requested": "/recruitment/my-referral",
+   "final": "/recruitment/my-referral",
+   "denied": false,
+   "error": null
+  },
+  "hr_payroll__it_declaration": {
+   "requested": "/recruitment/payroll/it-declaration",
+   "final": "/recruitment/payroll/it-declaration",
+   "denied": false,
+   "error": null
+  },
+  "hr_payroll__my_payslip": {
+   "requested": "/recruitment/payroll/my-payslip",
+   "final": "/recruitment/payroll/my-payslip",
+   "denied": false,
+   "error": null
+  },
+  "hr_performance_management__my_performance": {
+   "requested": "/recruitment/performance-management/my-performance",
+   "final": "/erp/user-profile",
+   "denied": true,
+   "error": null
+  },
+  "hr_reimbursement__claim_history": {
+   "requested": "/recruitment/reimbursement/claim-history",
+   "final": "/recruitment/reimbursement/claim-history",
+   "denied": false,
+   "error": null
+  },
+  "hr_resignation": {
+   "requested": "/recruitment/resignation",
+   "final": "/recruitment/resignation",
+   "denied": false,
+   "error": null
+  },
+  "hr_salary_advance__request": {
+   "requested": "/recruitment/salary-advance/request",
+   "final": "/erp/user-profile",
+   "denied": true,
+   "error": null
+  },
+  "hr_transfers__apply_transfer": {
+   "requested": "/recruitment/transfers/apply-transfer",
+   "final": "/recruitment/transfers/apply-transfer",
+   "denied": false,
+   "error": null
+  },
+  "hr_travel__my_travel_request": {
+   "requested": "/recruitment/travel/my-travel-request",
+   "final": "/recruitment/travel/my-travel-request",
+   "denied": false,
+   "error": null
+  },
+  "zz_return_calendar": {
+   "requested": "/erp/acms/calendar",
+   "final": "/erp/acms/calendar",
+   "denied": false,
+   "error": null
+  },
+  "erp_dashboard": {
+   "requested": "/erp/dashboard",
+   "final": "/erp/user-profile",
+   "denied": true,
+   "error": null
+  },
+  "erp_lesson_plan": {
+   "requested": "/erp/lesson-plan",
+   "final": "/erp/lesson-plan",
+   "denied": false,
+   "error": null
+  }
+ },
+ "endpoints": [
+  {
+   "method": "POST",
+   "service": "ANALYTICS",
+   "path": "/qbox/api/v1/track/session",
+   "query_keys": [],
+   "statuses": [
+    "201",
+    "None"
+   ],
+   "screens": [
+    "/erp/acms/assessments",
+    "/erp/acms/calendar",
+    "/erp/announcement",
+    "/erp/assessment-reports",
+    "/erp/assessment/report-card",
+    "/erp/assessment/test",
+    "/erp/attendance",
+    "/erp/board-prep",
+    "/erp/calendar",
+    "/erp/chat",
+    "/erp/communication-inbox",
+    "/erp/diary",
+    "/erp/goal-tracker",
+    "/erp/homework",
+    "/erp/lesson-plan",
+    "/erp/meeting-scheduler",
+    "/erp/online-books",
+    "/erp/online-class",
+    "/erp/school-clicker",
+    "/erp/school-wall",
+    "/erp/test-result",
+    "/erp/timetable",
+    "/erp/upload-marks",
+    "/erp/user-profile",
+    "/recruitment/asset/your-assets",
+    "/recruitment/attendance",
+    "/recruitment/course/my-courses",
+    "/recruitment/document-center",
+    "/recruitment/employee-grievance/my-tickets",
+    "/recruitment/growth-action-plan/my-plan",
+    "/recruitment/holiday-calendar",
+    "/recruitment/leave-apply",
+    "/recruitment/my-referral",
+    "/recruitment/payroll/it-declaration",
+    "/recruitment/payroll/my-payslip",
+    "/recruitment/reimbursement/claim-history",
+    "/recruitment/resignation",
+    "/recruitment/transfers/apply-transfer",
+    "/recruitment/travel/my-travel-request"
+   ],
+   "resp_shape": {
+    "success": "boolean",
+    "session_id": "string"
+   },
+   "req_shape": {
+    "type": "string",
+    "session_id": "string(uuid)",
+    "platform": "string",
+    "app": "string",
+    "user_id": "string(numeric)",
+    "user_role": "string(numeric)",
+    "school_id": "string(numeric)",
+    "started_at": "string(datetime)",
+    "user_agent": "string",
+    "screen_width": "integer",
+    "screen_height": "integer",
+    "url": "string(url)"
+   }
+  },
+  {
+   "method": "GET",
+   "service": "FIN",
+   "path": "/qbox/apiV1/expense-delegation-context/",
+   "query_keys": [
+    "erp_id"
+   ],
+   "statuses": [
+    "200",
+    "None"
+   ],
+   "screens": [
+    "/erp/acms/assessments",
+    "/erp/acms/calendar",
+    "/erp/announcement",
+    "/erp/assessment-reports",
+    "/erp/assessment/report-card",
+    "/erp/assessment/test",
+    "/erp/attendance",
+    "/erp/board-prep",
+    "/erp/calendar",
+    "/erp/chat",
+    "/erp/communication-inbox",
+    "/erp/diary",
+    "/erp/goal-tracker",
+    "/erp/homework",
+    "/erp/lesson-plan",
+    "/erp/meeting-scheduler",
+    "/erp/online-books",
+    "/erp/online-class",
+    "/erp/school-clicker",
+    "/erp/school-wall",
+    "/erp/test-result",
+    "/erp/timetable",
+    "/erp/upload-marks",
+    "/erp/user-profile"
+   ],
+   "resp_shape": {
+    "is_delegate": "boolean",
+    "delegators": [
+     "empty"
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/mongoapp/notifications/counts/",
+   "query_keys": [],
+   "statuses": [
+    "200",
+    "403",
+    "None"
+   ],
+   "screens": [
+    "/erp/acms/assessments",
+    "/erp/acms/calendar",
+    "/erp/announcement",
+    "/erp/assessment-reports",
+    "/erp/assessment/report-card",
+    "/erp/assessment/test",
+    "/erp/attendance",
+    "/erp/board-prep",
+    "/erp/calendar",
+    "/erp/communication-inbox",
+    "/erp/diary",
+    "/erp/goal-tracker",
+    "/erp/homework",
+    "/erp/lesson-plan",
+    "/erp/meeting-scheduler",
+    "/erp/online-books",
+    "/erp/online-class",
+    "/erp/school-clicker",
+    "/erp/school-wall",
+    "/erp/test-result",
+    "/erp/timetable",
+    "/erp/upload-marks",
+    "/erp/user-profile",
+    "/recruitment/asset/your-assets",
+    "/recruitment/attendance",
+    "/recruitment/course/my-courses",
+    "/recruitment/document-center",
+    "/recruitment/employee-grievance/my-tickets",
+    "/recruitment/growth-action-plan/my-plan",
+    "/recruitment/holiday-calendar",
+    "/recruitment/leave-apply",
+    "/recruitment/my-referral",
+    "/recruitment/payroll/it-declaration",
+    "/recruitment/payroll/my-payslip",
+    "/recruitment/reimbursement/claim-history",
+    "/recruitment/resignation",
+    "/recruitment/transfers/apply-transfer",
+    "/recruitment/travel/my-travel-request"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": {
+     "total_unread": "integer",
+     "approval_unread": "integer"
+    }
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/mongoapp/notifications/",
+   "query_keys": [
+    "page",
+    "page_size"
+   ],
+   "statuses": [
+    "200",
+    "403",
+    "None"
+   ],
+   "screens": [
+    "/erp/acms/assessments",
+    "/erp/acms/calendar",
+    "/erp/announcement",
+    "/erp/assessment-reports",
+    "/erp/assessment/report-card",
+    "/erp/assessment/test",
+    "/erp/attendance",
+    "/erp/board-prep",
+    "/erp/calendar",
+    "/erp/communication-inbox",
+    "/erp/diary",
+    "/erp/goal-tracker",
+    "/erp/homework",
+    "/erp/lesson-plan",
+    "/erp/meeting-scheduler",
+    "/erp/online-books",
+    "/erp/online-class",
+    "/erp/school-clicker",
+    "/erp/school-wall",
+    "/erp/test-result",
+    "/erp/timetable",
+    "/erp/upload-marks",
+    "/erp/user-profile",
+    "/recruitment/asset/your-assets",
+    "/recruitment/attendance",
+    "/recruitment/course/my-courses",
+    "/recruitment/document-center",
+    "/recruitment/employee-grievance/my-tickets",
+    "/recruitment/growth-action-plan/my-plan",
+    "/recruitment/holiday-calendar",
+    "/recruitment/leave-apply",
+    "/recruitment/my-referral",
+    "/recruitment/payroll/it-declaration",
+    "/recruitment/payroll/my-payslip",
+    "/recruitment/reimbursement/claim-history",
+    "/recruitment/resignation",
+    "/recruitment/transfers/apply-transfer",
+    "/recruitment/travel/my-travel-request"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": {
+     "results": [
+      {
+       "id": "string",
+       "title": "string",
+       "message": "string",
+       "module": {
+        "name": "string"
+       },
+       "action_url": "string",
+       "category": "string",
+       "source": "string",
+       "is_read": "boolean",
+       "created_at": "string(datetime)"
+      }
+     ],
+     "total": "integer",
+     "page": "integer",
+     "page_size": "integer"
+    }
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/home-banner/promotional/active/",
+   "query_keys": [],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/user-profile"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": [
+     {
+      "id": "integer",
+      "title": "string",
+      "web_image_url": "string(url)",
+      "app_image_url": "string(empty)",
+      "redirect_url": "string(empty)"
+     }
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/home-banner/announcement/active/",
+   "query_keys": [],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/user-profile"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": [
+     {
+      "id": "integer",
+      "title": "string",
+      "web_image_url": "string(url)",
+      "app_image_url": "string(empty)",
+      "redirect_url": "string(empty)|string(url)",
+      "announcement_text": "string(empty)",
+      "show_image": "boolean",
+      "show_text": "boolean"
+     }
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "HRMS",
+   "path": "/qbox/grievance-module/employee-ticket-summary/",
+   "query_keys": [],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/user-profile"
+   ],
+   "resp_shape": {
+    "has_active_request": "boolean",
+    "unread_count": "integer",
+    "pending_reply_count": "integer",
+    "pending_feedback_count": "integer",
+    "info_requested_count": "integer",
+    "has_pending_action": "boolean"
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/erp_user/user-mgmt/user-info/",
+   "query_keys": [
+    "session_year"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/user-profile"
+   ],
+   "resp_shape": {
+    "message": "string",
+    "result": {
+     "id": "integer",
+     "erp_id": "string",
+     "name": "string",
+     "email": "string(email)",
+     "contact": "string",
+     "profile": "string(url)",
+     "address": "string",
+     "pin_code": "string(numeric)",
+     "date_of_birth": "string(date)",
+     "session_details": {}
+    },
+    "status_code": "integer"
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/event-feedback/staff/my/pending/",
+   "query_keys": [],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/acms/assessments",
+    "/erp/acms/calendar",
+    "/erp/announcement",
+    "/erp/assessment-reports",
+    "/erp/assessment/report-card",
+    "/erp/assessment/test",
+    "/erp/attendance",
+    "/erp/board-prep",
+    "/erp/calendar",
+    "/erp/chat",
+    "/erp/communication-inbox",
+    "/erp/diary",
+    "/erp/goal-tracker",
+    "/erp/homework",
+    "/erp/lesson-plan",
+    "/erp/meeting-scheduler",
+    "/erp/online-books",
+    "/erp/online-class",
+    "/erp/school-clicker",
+    "/erp/school-wall",
+    "/erp/test-result",
+    "/erp/timetable",
+    "/erp/upload-marks",
+    "/erp/user-profile"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": [
+     "empty"
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "POST",
+   "service": "ERP",
+   "path": "/qbox/erp_user/fcm-register/",
+   "query_keys": [],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/acms/assessments",
+    "/erp/acms/calendar",
+    "/erp/announcement",
+    "/erp/assessment-reports",
+    "/erp/assessment/report-card",
+    "/erp/assessment/test",
+    "/erp/attendance",
+    "/erp/board-prep",
+    "/erp/calendar",
+    "/erp/chat",
+    "/erp/communication-inbox",
+    "/erp/diary",
+    "/erp/goal-tracker",
+    "/erp/homework",
+    "/erp/lesson-plan",
+    "/erp/meeting-scheduler",
+    "/erp/online-books",
+    "/erp/online-class",
+    "/erp/school-clicker",
+    "/erp/school-wall",
+    "/erp/test-result",
+    "/erp/timetable",
+    "/erp/upload-marks",
+    "/erp/user-profile"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": [
+     "empty"
+    ]
+   },
+   "req_shape": {
+    "fcm_token": "string"
+   }
+  },
+  {
+   "method": "POST",
+   "service": "CLARITY(3p)",
+   "path": "/collect",
+   "query_keys": [],
+   "statuses": [
+    "200",
+    "204",
+    "None"
+   ],
+   "screens": [
+    "/erp/acms/assessments",
+    "/erp/acms/calendar",
+    "/erp/announcement",
+    "/erp/assessment-reports",
+    "/erp/assessment/report-card",
+    "/erp/assessment/test",
+    "/erp/attendance",
+    "/erp/board-prep",
+    "/erp/calendar",
+    "/erp/chat",
+    "/erp/communication-inbox",
+    "/erp/diary",
+    "/erp/goal-tracker",
+    "/erp/homework",
+    "/erp/lesson-plan",
+    "/erp/meeting-scheduler",
+    "/erp/online-books",
+    "/erp/online-class",
+    "/erp/school-clicker",
+    "/erp/school-wall",
+    "/erp/test-result",
+    "/erp/timetable",
+    "/erp/upload-marks",
+    "/erp/user-profile"
+   ],
+   "resp_shape": null,
+   "req_shape": "non-json"
+  },
+  {
+   "method": "POST",
+   "service": "ANALYTICS",
+   "path": "/qbox/api/v1/track/batch",
+   "query_keys": [],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/acms/assessments",
+    "/erp/acms/calendar",
+    "/erp/announcement",
+    "/erp/assessment-reports",
+    "/erp/assessment/report-card",
+    "/erp/assessment/test",
+    "/erp/attendance",
+    "/erp/board-prep",
+    "/erp/calendar",
+    "/erp/chat",
+    "/erp/communication-inbox",
+    "/erp/diary",
+    "/erp/goal-tracker",
+    "/erp/homework",
+    "/erp/lesson-plan",
+    "/erp/meeting-scheduler",
+    "/erp/online-books",
+    "/erp/online-class",
+    "/erp/school-clicker",
+    "/erp/school-wall",
+    "/erp/test-result",
+    "/erp/timetable",
+    "/erp/upload-marks",
+    "/erp/user-profile",
+    "/recruitment/asset/your-assets",
+    "/recruitment/attendance",
+    "/recruitment/course/my-courses",
+    "/recruitment/document-center",
+    "/recruitment/employee-grievance/my-tickets",
+    "/recruitment/growth-action-plan/my-plan",
+    "/recruitment/holiday-calendar",
+    "/recruitment/leave-apply",
+    "/recruitment/my-referral",
+    "/recruitment/payroll/it-declaration",
+    "/recruitment/payroll/my-payslip",
+    "/recruitment/reimbursement/claim-history",
+    "/recruitment/resignation",
+    "/recruitment/transfers/apply-transfer",
+    "/recruitment/travel/my-travel-request"
+   ],
+   "resp_shape": {
+    "success": "boolean",
+    "accepted": "integer",
+    "rejected": "integer",
+    "errors": [
+     "empty"
+    ]
+   },
+   "req_shape": {
+    "events": [
+     {
+      "module": "string",
+      "action": "string",
+      "detail": "string",
+      "meta": {
+       "search": "string(empty)",
+       "hash": "string(empty)",
+       "fullPath": "string"
+      },
+      "event_id": "string(uuid)",
+      "session_id": "string(uuid)",
+      "platform": "string",
+      "app": "string",
+      "user_id": "string(numeric)",
+      "user_role": "string(numeric)",
+      "school_id": "string(numeric)",
+      "timestamp": "string(datetime)",
+      "url": "string(url)",
+      "pathname": "string"
+     }
+    ]
+   }
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/acms/team-roles/my_roles/",
+   "query_keys": [],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/acms/assessments",
+    "/erp/acms/calendar"
+   ],
+   "resp_shape": [
+    "empty"
+   ],
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/acms/curriculum/grades/",
+   "query_keys": [],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/acms/assessments"
+   ],
+   "resp_shape": [
+    {
+     "id": "integer",
+     "grade_name": "string|string(empty)"
+    }
+   ],
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/acms/assessments/marks_upload_dashboard/",
+   "query_keys": [
+    "branch_id",
+    "page",
+    "page_size",
+    "paginate_by",
+    "session_year",
+    "tab"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/acms/assessments"
+   ],
+   "resp_shape": {
+    "count": "integer",
+    "page": "integer",
+    "page_size": "integer",
+    "paginate_by": "string",
+    "total_rows": "integer",
+    "results": [
+     {
+      "id": "integer",
+      "name": "string",
+      "code": "string",
+      "grade_id": "integer",
+      "grade_name": "string",
+      "subject_id": "integer",
+      "subject_name": "string",
+      "test_date": "string(date)",
+      "result_date": "string(date)",
+      "is_overdue": "boolean",
+      "is_urgent": "boolean",
+      "days_remaining": "integer",
+      "marks_published": "boolean",
+      "assessment_mode": "string",
+      "teacher_pdf_url": "string(url)",
+      "branch_assignment_id": "integer",
+      "branch_id": "integer",
+      "branch_name": "string",
+      "branch_marks_published": "boolean",
+      "acad_session_id": "integer",
+      "online_pending_sync": "integer",
+      "online_pending_grading": "integer",
+      "section_mapping_id": "integer",
+      "section_name": "string",
+      "total_attempts": "integer",
+      "total_students": "integer",
+      "absent_with_marks": "integer",
+      "absent_without_marks": "integer",
+      "has_marks": "boolean",
+      "omr_uploaded": "integer",
+      "omr_scanned": "integer",
+      "omr_evaluated": "integer",
+      "omr_errors": "integer"
+     }
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/acms/assessments/my-access/",
+   "query_keys": [],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/acms/assessments"
+   ],
+   "resp_shape": {
+    "scope": "string",
+    "user_level": "integer",
+    "grades": [
+     {
+      "id": "integer",
+      "grade_name": "string"
+     }
+    ],
+    "subjects": [
+     {
+      "id": "integer",
+      "subject_name": "string"
+     }
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/acms/assessments/",
+   "query_keys": [
+    "branch_id",
+    "date_filter",
+    "page",
+    "page_size",
+    "session_year",
+    "sort_dir"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/acms/assessments"
+   ],
+   "resp_shape": {
+    "count": "integer",
+    "next": "string(url)",
+    "previous": "null",
+    "results": [
+     {
+      "id": "integer",
+      "code": "string",
+      "name": "string",
+      "test_type": "string",
+      "test_type_display": "string",
+      "section_access": "string",
+      "grade": "integer",
+      "grade_name": "string",
+      "subject": "integer",
+      "subject_name": "string",
+      "test_date": "string(date)",
+      "test_time": "string(time)",
+      "scheduled_via_calendar": "boolean",
+      "calendar_event_id": "integer",
+      "effective_test_date": "string(date)",
+      "effective_test_time": "null",
+      "total_marks": "string(numeric)",
+      "duration_minutes": "integer",
+      "status": "string",
+      "status_display": "string",
+      "practice_paper_count": "integer",
+      "sample_paper_count": "integer",
+      "has_final_paper": "boolean",
+      "final_paper_locked": "boolean",
+      "has_blueprint": "boolean",
+      "blueprint_status": "string",
+      "blueprint_status_display": "string",
+      "is_blueprint_approved": "boolean",
+      "branch_assignments": [
+       {
+        "id": "integer",
+        "assessment": "integer",
+        "branch": "integer",
+        "branch_name": "string",
+        "acad_session": "integer",
+        "session_year": "integer",
+        "session_year_name": "string",
+        "assigned_by": "integer|null",
+        "assigned_by_name": "string",
+        "assigned_at": "string(datetime)",
+        "marks_published": "boolean",
+        "marks_published_at": "null",
+        "marks_published_by_name": "null"
+       }
+      ],
+      "calendar_event_detail": {
+       "id": "integer",
+       "title": "string",
+       "event_date": "string(date)",
+       "event_time": "null",
+       "city_names": [
+        "string"
+       ],
+       "branch_names": [
+        "string"
+       ],
+       "is_city_wide": "boolean"
+      },
+      "result_date": "string(date)",
+      "test_id": "null|string",
+      "term": "null|string",
+      "paper_set": "null|string",
+      "paper_name": "null",
+      "school_type": "string",
+      "assessment_mode": "string",
+      "is_manual": "boolean",
+      "online_test": "null",
+      "marks_published": "boolean",
+      "marks_published_at": "null",
+      "parent_assessment_id": "null",
+      "parent_assessment_code": "null",
+      "parent_assessment_name": "null",
+      "parent_assessment_test_date": "null",
+      "parent_assessment_test_time": "null",
+      "is_rescheduled": "boolean",
+      "rescheduled_children": [
+       "empty|mixed"
+      ],
+      "assigned_to": "integer|null",
+      "assigned_to_name": "null|string",
+      "assignment_deadline": "null",
+      "can_edit": "boolean",
+      "practice_paper_deadline": "null",
+      "sample_paper_deadline": "null",
+      "final_paper_deadline": "null|string(date)",
+      "send_to_qc_deadline": "null|string(date)",
+      "qc_to_planner_deadline": "null|string(date)",
+      "practice_papers_overdue_count": "integer",
+      "sample_papers_overdue_count": "integer",
+      "final_paper_overdue": "boolean",
+      "created_by_name": "string",
+      "created_at": "string(datetime)"
+     }
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "POST",
+   "service": "ERP",
+   "path": "/qbox/erp_user/access-token/",
+   "query_keys": [],
+   "statuses": [
+    "200"
+   ],
+   "screens": [],
+   "resp_shape": {
+    "status": "string(numeric)",
+    "message": "string",
+    "data": "string",
+    "force_update": "boolean"
+   },
+   "req_shape": {
+    "refresh": "string"
+   }
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/acms/cities/",
+   "query_keys": [
+    "session_year"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/acms/calendar"
+   ],
+   "resp_shape": [
+    {
+     "id": "integer",
+     "city_name": "string",
+     "description": "string(empty)",
+     "is_active": "boolean",
+     "branch_count": "integer",
+     "created_at": "string(datetime)"
+    }
+   ],
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/erp_user/grade/",
+   "query_keys": [],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/acms/calendar"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "status": "string",
+    "message": "string",
+    "data": [
+     {
+      "id": "integer",
+      "grade_id": "integer",
+      "grade_name": "string",
+      "branch_id": "integer",
+      "branch_name": "string"
+     }
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/acms/calendar-events/holiday_range/",
+   "query_keys": [
+    "session_year"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/acms/calendar"
+   ],
+   "resp_shape": {
+    "has_holidays": "boolean",
+    "start_date": "string(date)",
+    "end_date": "string(date)",
+    "count": "integer",
+    "generated_at": "string(datetime)"
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/acms/calendar-events/calendar_status/",
+   "query_keys": [
+    "session_year"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/acms/calendar"
+   ],
+   "resp_shape": {
+    "session_year_id": "string(numeric)",
+    "is_published": "boolean",
+    "is_generated": "boolean",
+    "draft_events_count": "integer",
+    "total_events_count": "integer"
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/acms/calendar-events/",
+   "query_keys": [
+    "branch",
+    "end_date",
+    "session_year",
+    "start_date"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/acms/calendar"
+   ],
+   "resp_shape": [
+    {
+     "id": "integer",
+     "title": "string",
+     "description": "string(empty)",
+     "event_type": "string",
+     "event_type_display": "string",
+     "event_date": "string(date)",
+     "event_time": "null",
+     "end_date": "null",
+     "city_names": [
+      "empty|string"
+     ],
+     "city_ids": [
+      "empty|integer"
+     ],
+     "session_year": "integer",
+     "session_year_name": "string",
+     "grade_names": [
+      "empty|string"
+     ],
+     "grade_ids": [
+      "empty|integer"
+     ],
+     "subject_names": [
+      "empty|string"
+     ],
+     "subject_ids_list": [
+      "empty|integer"
+     ],
+     "branches_detail": [
+      "mixed"
+     ],
+     "resolved_branches": [
+      "mixed"
+     ],
+     "branch_exclusions": [
+      "empty|mixed"
+     ],
+     "test_type": "null|string",
+     "test_type_display": "null|string",
+     "assessment": "null",
+     "assessment_code": "null",
+     "assessment_detail": "null",
+     "recurrence_pattern": "string",
+     "is_recurring_parent": "boolean",
+     "notes": "string(empty)",
+     "color": "string",
+     "is_published": "boolean",
+     "is_auto_holiday": "boolean",
+     "created_at": "string(datetime)",
+     "legacy_event_id": "null",
+     "legacy_event_detail": "null",
+     "is_cancelled": "boolean"
+    }
+   ],
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/announcement/announcement-category/",
+   "query_keys": [],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/announcement"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "data": [
+     {
+      "id": "integer",
+      "category_name": "string"
+     }
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/announcement/v2/announcement/",
+   "query_keys": [
+    "acad_session",
+    "page",
+    "page_size"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/announcement"
+   ],
+   "resp_shape": {
+    "next": "string(url)",
+    "previous": "null",
+    "count": "integer",
+    "limit": "integer",
+    "current_page": "integer",
+    "total_pages": "integer",
+    "results": [
+     {
+      "id": "integer",
+      "title": "string",
+      "content": "string",
+      "category": "integer",
+      "category_name": "string",
+      "created_at": "string(datetime)",
+      "erp_name": "string",
+      "created_by": "integer",
+      "is_flash_event": "boolean",
+      "flash_img": [
+       "empty"
+      ],
+      "event_link": "null",
+      "is_draft": "boolean"
+     }
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/erp_user/access-control/matrix/",
+   "query_keys": [],
+   "statuses": [
+    "200"
+   ],
+   "screens": [],
+   "resp_shape": null,
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/erp_user/principle-signature/",
+   "query_keys": [
+    "branch_id",
+    "session_year",
+    "user_level"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/assessment/report-card"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": {
+     "next": "null",
+     "previous": "null",
+     "count": "integer",
+     "limit": "integer",
+     "current_page": "integer",
+     "total_pages": "integer",
+     "results": [
+      {
+       "id": "integer",
+       "signature": "string",
+       "branch_id": "integer",
+       "is_delete": "boolean",
+       "author_id__erp_id": "string",
+       "author_id__name": "string",
+       "author_id__branch_id__branch_name": "string",
+       "author_id__roles_id__role_name": "null",
+       "author__user__level__user_level": "integer"
+      }
+     ]
+    }
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/assessment/get-student-grades/",
+   "query_keys": [],
+   "statuses": [
+    "500"
+   ],
+   "screens": [
+    "/erp/assessment/report-card"
+   ],
+   "resp_shape": {
+    "status": "integer",
+    "data": "string"
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/assessment/exam-type-list/",
+   "query_keys": [],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/assessment/test"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": [
+     {
+      "id": "integer",
+      "exam_name": "string",
+      "is_delete": "boolean",
+      "created_at": "string(datetime)",
+      "updated_at": "null|string(datetime)",
+      "created_by": "null",
+      "updated_by": "null"
+     }
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/erp_user/user-mgmt/user-grades/",
+   "query_keys": [
+    "acad_session",
+    "access_level",
+    "session_year"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/assessment/test",
+    "/erp/attendance",
+    "/erp/homework",
+    "/erp/online-class",
+    "/erp/school-clicker",
+    "/erp/school-wall",
+    "/erp/timetable"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": [
+     {
+      "grade_id": "integer",
+      "grade__grade_name": "string",
+      "grade__eduvate_grade_id": "integer"
+     }
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/assessment/get-start-quiz-user-levels-access/",
+   "query_keys": [],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/assessment/test"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": [
+     "integer"
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/assessment/report-card-question-category-mapping/",
+   "query_keys": [],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/assessment/test"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": [
+     {
+      "id": "integer",
+      "central_category_id": "integer",
+      "central_category_name": "string",
+      "erp_category_id": "integer",
+      "is_delete": "boolean",
+      "is_draft": "boolean",
+      "is_review": "boolean",
+      "created_at": "string(datetime)",
+      "is_subject_dependent": "boolean",
+      "erp_category_name": "string"
+     }
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/erp_user/user-mgmt/user-branches/",
+   "query_keys": [
+    "all_branches",
+    "session_year"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/assessment-reports",
+    "/erp/calendar",
+    "/erp/meeting-scheduler"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": [
+     {
+      "id": "integer",
+      "branch_id": "integer",
+      "branch__branch_name": "string",
+      "branch__branch_code": "string(numeric)",
+      "branch__branch_type": "string",
+      "session_year_id": "integer",
+      "branch__brand_id": "integer",
+      "branch__brand__code": "string",
+      "branch__brand__name": "string"
+     }
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "MGMT",
+   "path": "/qbox/central-admin/b2b-report-config/",
+   "query_keys": [
+    "user_level"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/assessment-reports"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": {
+     "access": "boolean"
+    }
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/board-prep/cohorts/",
+   "query_keys": [],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/board-prep"
+   ],
+   "resp_shape": [
+    {
+     "id": "integer",
+     "branch": "integer",
+     "branch_name": "string",
+     "branch_code": "string(numeric)",
+     "grade": "integer",
+     "grade_name": "string",
+     "session_year": "integer",
+     "session_year_label": "string",
+     "board": "string",
+     "is_active": "boolean",
+     "is_bucket_locked": "boolean",
+     "bucket_locked_at": "null",
+     "created_at": "string(datetime)",
+     "updated_at": "string(datetime)"
+    }
+   ],
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/board-prep/central/rollup/",
+   "query_keys": [
+    "branch_id",
+    "grade",
+    "include_no_marks"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/board-prep"
+   ],
+   "resp_shape": {
+    "grade": "string",
+    "kpis": {
+     "total_students": "integer",
+     "on_track": "integer",
+     "behind_total": "integer",
+     "behind_mild": "integer",
+     "behind_concerning": "integer",
+     "behind_critical": "integer",
+     "ahead": "integer",
+     "no_marks": "integer",
+     "no_goal": "integer"
+    },
+    "students": [
+     {
+      "student_session_id": "integer",
+      "student_name": "string",
+      "erp_id": "string",
+      "branch_id": "integer",
+      "branch_name": "string",
+      "section_name": "string",
+      "cohort_id": "integer",
+      "bucket": "string",
+      "bucket_lower": "integer",
+      "bucket_upper": "integer",
+      "rolling_avg_pct": "integer|number",
+      "gap": "integer|number",
+      "status": "string",
+      "status_tier": "null|string",
+      "slots": [
+       {
+        "slot": "string",
+        "subject_id": "integer|null",
+        "subject_name": "null|string",
+        "avg_pct": "integer|null|number",
+        "ct_avg": "integer|null|number",
+        "pa_avg": "integer|null|number",
+        "absent": "boolean"
+       }
+      ],
+      "subjects": "null"
+     }
+    ],
+    "branches": [
+     {
+      "branch_id": "integer",
+      "branch_name": "string",
+      "branch_code": "string(numeric)"
+     }
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/academic/imprest-event/",
+   "query_keys": [
+    "acad_session",
+    "end_date",
+    "page",
+    "start_date"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/calendar"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": {
+     "next": "null",
+     "previous": "null",
+     "count": "integer",
+     "limit": "integer",
+     "current_page": "integer",
+     "total_pages": "integer",
+     "results": [
+      {
+       "id": "integer",
+       "title": "string",
+       "highlight": "null",
+       "description": "string",
+       "event_date": "string(date)",
+       "reg_start": "null",
+       "reg_end": "null",
+       "is_subscription_need": "boolean",
+       "remarks": "null",
+       "event_price": "integer",
+       "refundable": "boolean",
+       "acad_session": [
+        "integer"
+       ],
+       "sec_map": [
+        "empty"
+       ],
+       "grades": [
+        {
+         "id": "integer",
+         "grade_name": "string"
+        }
+       ],
+       "subjects": [
+        "empty"
+       ],
+       "attachments": [
+        "empty"
+       ],
+       "policy": {},
+       "approval_status": "integer",
+       "students_count": "integer",
+       "participation_count": "integer",
+       "policy_dates": {},
+       "subscription": "string(empty)",
+       "branch_name": "string",
+       "event_type": "string",
+       "scores_published": "boolean",
+       "my_score": "null",
+       "has_media": "boolean",
+       "is_managed": "boolean",
+       "change_status": "string",
+       "proposed_event_date": "null",
+       "proposed_event_price": "null",
+       "proposed_event_name": "null",
+       "proposed_description": "null",
+       "proposed_attachments": "null",
+       "change_requested_at": "null"
+      }
+     ],
+     "counts": {
+      "total": "integer",
+      "live": "integer",
+      "rejected": "integer",
+      "pending": "integer",
+      "cancelled": "integer",
+      "approved": "integer"
+     }
+    }
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/academic/event-coscholastic-subjects/",
+   "query_keys": [],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/calendar"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": [
+     {
+      "id": "integer",
+      "subject_name": "string"
+     }
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "CHAT",
+   "path": "/api/v4/config/client",
+   "query_keys": [
+    "format"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/chat"
+   ],
+   "resp_shape": {
+    "AboutLink": "string(url)",
+    "AllowDownloadLogs": "string",
+    "AndroidAppDownloadLink": "string(url)",
+    "AndroidLatestVersion": "string(empty)",
+    "AndroidMinVersion": "string(empty)",
+    "AppDownloadLink": "string(url)",
+    "AppsPluginEnabled": "string",
+    "AsymmetricSigningPublicKey": "string",
+    "BuildDate": "string(empty)",
+    "BuildEnterpriseReady": "string(empty)",
+    "BuildHash": "string(empty)",
+    "BuildHashEnterprise": "string(empty)",
+    "BuildNumber": "string(empty)",
+    "CWSURL": "string(empty)",
+    "CustomBrandText": "string(empty)",
+    "CustomDescriptionText": "string(empty)",
+    "DefaultClientLocale": "string",
+    "DiagnosticId": "string",
+    "DiagnosticsEnabled": "string",
+    "EmailLoginButtonBorderColor": "string",
+    "EmailLoginButtonColor": "string",
+    "EmailLoginButtonTextColor": "string",
+    "EnableAskCommunityLink": "string",
+    "EnableBotAccountCreation": "string",
+    "EnableClientMetrics": "string",
+    "EnableComplianceExport": "string",
+    "EnableCustomBrand": "string",
+    "EnableCustomEmoji": "string",
+    "EnableDesktopLandingPage": "string",
+    "EnableDiagnostics": "string",
+    "EnableFile": "string",
+    "EnableGuestAccounts": "string",
+    "EnableJoinLeaveMessageByDefault": "string",
+    "EnableLdap": "string",
+    "EnableMultifactorAuthentication": "string",
+    "EnableOpenServer": "string",
+    "EnableSaml": "string",
+    "EnableSignInWithEmail": "string",
+    "EnableSignInWithUsername": "string",
+    "EnableSignUpWithEmail": "string",
+    "EnableSignUpWithGitLab": "string",
+    "EnableSignUpWithGoogle": "string",
+    "EnableSignUpWithOffice365": "string",
+    "EnableSignUpWithOpenId": "string",
+    "EnableUserCreation": "string",
+    "EnableUserStatuses": "string",
+    "EnforceMultifactorAuthentication": "string",
+    "FeatureFlagAppsEnabled": "string",
+    "FeatureFlagAttributeBasedAccessControl": "string",
+    "FeatureFlagChannelBookmarks": "string",
+    "FeatureFlagCloudAnnualRenewals": "string",
+    "FeatureFlagCloudDedicatedExportUI": "string",
+    "FeatureFlagCloudIPFiltering": "string",
+    "FeatureFlagConsumePostHook": "string",
+    "FeatureFlagCustomProfileAttributes": "string",
+    "FeatureFlagDeprecateCloudFree": "string",
+    "FeatureFlagEnableExportDirectDownload": "string",
+    "FeatureFlagEnableRemoteClusterService": "string",
+    "FeatureFlagEnableSharedChannelsDMs": "string",
+    "FeatureFlagEnableSharedChannelsMemberSync": "string",
+    "FeatureFlagEnableSharedChannelsPlugins": "string",
+    "FeatureFlagEnableSyncAllUsersForRemoteCluster": "string",
+    "FeatureFlagExperimentalAuditSettingsSystemConsoleUI": "string",
+    "FeatureFlagMoveThreadsEnabled": "string",
+    "FeatureFlagNormalizeLdapDNs": "string",
+    "FeatureFlagNotificationMonitoring": "string",
+    "FeatureFlagOnboardingTourTips": "string",
+    "FeatureFlagPermalinkPreviews": "string",
+    "FeatureFlagStreamlinedMarketplace": "string",
+    "FeatureFlagTestBoolFeature": "string",
+    "FeatureFlagTestFeature": "string",
+    "FeatureFlagWebSocketEventScope": "string",
+    "FeatureFlagWysiwygEditor": "string",
+    "FileLevel": "string",
+    "ForgotPasswordLink": "string(empty)",
+    "GitLabButtonColor": "string(empty)",
+    "GitLabButtonText": "string(empty)",
+    "GuestAccountsEnforceMultifactorAuthentication": "string",
+    "HasImageProxy": "string",
+    "HelpLink": "string(url)",
+    "HideGuestTags": "string",
+    "IosAppDownloadLink": "string(url)",
+    "IosLatestVersion": "string(empty)",
+    "IosMinVersion": "string(empty)",
+    "LdapLoginButtonBorderColor": "string(empty)",
+    "LdapLoginButtonColor": "string(empty)",
+    "LdapLoginButtonTextColor": "string(empty)",
+    "LdapLoginFieldName": "string(empty)",
+    "MobileExternalBrowser": "string",
+    "NoAccounts": "string",
+    "OpenIdButtonColor": "string(empty)",
+    "OpenIdButtonText": "string(empty)",
+    "PasswordEnableForgotLink": "string",
+    "PasswordMinimumLength": "string(numeric)",
+    "PasswordRequireLowercase": "string",
+    "PasswordRequireNumber": "string",
+    "PasswordRequireSymbol": "string",
+    "PasswordRequireUppercase": "string",
+    "PluginsEnabled": "string",
+    "PrivacyPolicyLink": "string(url)",
+    "ReportAProblemLink": "string(url)",
+    "ReportAProblemMail": "string(empty)",
+    "ReportAProblemType": "string",
+    "SamlLoginButtonBorderColor": "string(empty)",
+    "SamlLoginButtonColor": "string(empty)",
+    "SamlLoginButtonText": "string(empty)",
+    "SamlLoginButtonTextColor": "string(empty)",
+    "ServiceEnvironment": "string",
+    "SiteName": "string",
+    "SiteURL": "string(url)",
+    "SupportEmail": "string(empty)",
+    "TelemetryId": "string",
+    "TermsOfServiceLink": "string(url)",
+    "Version": "string",
+    "WebsocketPort": "string(numeric)",
+    "WebsocketSecurePort": "string(numeric)",
+    "WebsocketURL": "string(empty)"
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "CHAT",
+   "path": "/api/v4/license/client",
+   "query_keys": [
+    "format"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/chat"
+   ],
+   "resp_shape": {
+    "IsLicensed": "string"
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "CHAT",
+   "path": "/api/v4/custom_profile_attributes/fields",
+   "query_keys": [],
+   "statuses": [
+    "401"
+   ],
+   "screens": [
+    "/erp/chat"
+   ],
+   "resp_shape": {
+    "id": "string",
+    "message": "string",
+    "detailed_error": "string(empty)",
+    "request_id": "string",
+    "status_code": "integer"
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "CHAT",
+   "path": "/static/files/7654b55b2f3442e91404.css",
+   "query_keys": [],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/chat"
+   ],
+   "resp_shape": null,
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/academic-communication/meta/",
+   "query_keys": [],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/communication-inbox"
+   ],
+   "resp_shape": {
+    "message": "string",
+    "result": {
+     "roles": [
+      {
+       "key": "string(numeric)",
+       "label": "string",
+       "level": "integer",
+       "assign_to_levels": [
+        "empty|integer"
+       ]
+      }
+     ],
+     "user_levels": [
+      {
+       "level": "integer",
+       "name": "string"
+      }
+     ],
+     "priorities": [
+      {
+       "key": "string",
+       "label": "string"
+      }
+     ],
+     "required_actions": [
+      {
+       "key": "string",
+       "label": "string"
+      }
+     ],
+     "reminder_offsets": [
+      "string"
+     ],
+     "categories": [
+      {
+       "id": "integer",
+       "name": "string"
+      }
+     ],
+     "branches": [
+      {
+       "branch_id": "integer",
+       "branch_name": "string",
+       "zone_id": "integer",
+       "zone_name": "string",
+       "boards": [
+        "empty|string"
+       ],
+       "branch_type": "string"
+      }
+     ],
+     "zones": [
+      {
+       "zone_id": "integer",
+       "zone_name": "string"
+      }
+     ],
+     "branch_types": [
+      {
+       "value": "string",
+       "label": "string"
+      }
+     ],
+     "acms_cities": [
+      {
+       "city_id": "integer",
+       "city_name": "string",
+       "branch_ids": [
+        "integer"
+       ]
+      }
+     ],
+     "completion_modes": [
+      {
+       "key": "string",
+       "label": "string"
+      }
+     ],
+     "grades": [
+      {
+       "grade_id": "integer",
+       "grade_name": "string"
+      }
+     ],
+     "is_super_admin": "boolean",
+     "is_approver": "boolean",
+     "is_second_level_approver": "boolean",
+     "is_central": "boolean",
+     "has_admin_access": "boolean",
+     "crm_roles": [
+      "empty"
+     ],
+     "hrms_roles": [
+      "empty"
+     ],
+     "branch_bases": [
+      {
+       "key": "string",
+       "label": "string"
+      }
+     ],
+     "is_recipient": "boolean",
+     "can_create": "boolean",
+     "creatable_category_ids": [
+      "empty"
+     ],
+     "can_manage_chats": "boolean",
+     "mandatory_cc": {
+      "overall": [
+       "empty"
+      ],
+      "by_category": {
+       "<dynamic-key>": [
+        "integer"
+       ]
+      },
+      "people": {
+       "<dynamic-key>": {
+        "name": "string",
+        "erp_id": "string"
+       }
+      }
+     }
+    },
+    "status_code": "integer"
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/academic-communication/communications/inbox/",
+   "query_keys": [
+    "bucket",
+    "page",
+    "page_size",
+    "session_year"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/communication-inbox"
+   ],
+   "resp_shape": {
+    "message": "string",
+    "result": {
+     "results": [
+      "empty"
+     ],
+     "count": "integer",
+     "page": "integer",
+     "page_size": "integer",
+     "summary": {
+      "all": "integer",
+      "new": "integer",
+      "action": "integer",
+      "overdue": "integer"
+     },
+     "can_oversee": "boolean"
+    },
+    "status_code": "integer"
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/academic-communication/communications/chat/unread-count/",
+   "query_keys": [],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/communication-inbox"
+   ],
+   "resp_shape": {
+    "message": "string",
+    "result": {
+     "count": "integer"
+    },
+    "status_code": "integer"
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/school-feed/my-diary-given/",
+   "query_keys": [
+    "acad_session",
+    "end_date",
+    "page_num",
+    "page_size",
+    "start_date"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/diary"
+   ],
+   "resp_shape": {
+    "next": "string(url)",
+    "previous": "null",
+    "count": "integer",
+    "limit": "integer",
+    "current_page": "integer",
+    "total_pages": "integer",
+    "results": [
+     {
+      "id": "integer",
+      "title": "null|string|string(empty)",
+      "classwork": "string",
+      "homework": "string",
+      "has_homework": "boolean",
+      "media_files": [
+       "empty"
+      ],
+      "is_online": "boolean",
+      "is_substitute": "boolean",
+      "last_submission_dt": "string(datetime)",
+      "created_at": "string(datetime)",
+      "sections": [
+       "string"
+      ],
+      "subjects": [
+       "string"
+      ]
+     }
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/timetable/teacher-timetable/",
+   "query_keys": [
+    "acad_session",
+    "teacher_id"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/diary"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": {
+     "week_days": {
+      "0": "string",
+      "1": "string",
+      "2": "string",
+      "3": "string",
+      "4": "string",
+      "5": "string",
+      "6": "string"
+     },
+     "week_holidays": {
+      "0": "null",
+      "1": "null",
+      "2": "null",
+      "3": "null",
+      "4": "null",
+      "5": "null",
+      "6": "null"
+     },
+     "teacher_periods": [
+      {
+       "id": "integer",
+       "period_id": "integer",
+       "period__period_name": "string",
+       "period__position": "integer",
+       "period__is_break": "boolean",
+       "section_mapping__grade_id": "integer",
+       "section_mapping__section_id": "integer",
+       "section_mapping_id": "integer",
+       "section_mapping__grade__grade_name": "string",
+       "section_mapping__section__section_name": "string",
+       "period__start_time": "string(time)",
+       "period__end_time": "string(time)",
+       "day": "integer",
+       "teacher_id": "integer",
+       "teacher__name": "string",
+       "teacher__erp_id": "string",
+       "mapping_subject_id": "integer|null",
+       "mapping_subject__subject__subject_name": "null|string",
+       "is_draft": "boolean",
+       "dummy_teacher_id": "null",
+       "dummy_teacher__name": "null",
+       "teacher__teacher_type": "string",
+       "is_sen": "boolean",
+       "student_id": "null",
+       "student__name": "null",
+       "student__erp_id": "null",
+       "common_group_id": "null",
+       "substitute_period_id": "null",
+       "substitute_teacher_id": "null",
+       "substitute_teacher_erp_id": "null",
+       "substitute_teacher_name": "null",
+       "substitute_teacher_type": "null",
+       "sub_mapping_subject_id": "null",
+       "sub_subject_id": "null",
+       "sub_subject_subject_name": "null",
+       "homework_assigned": "boolean",
+       "subject_id": "integer|null",
+       "eduvate_grade_id": "integer",
+       "eduvate_subject_id": "integer|null",
+       "central_gsmap": "integer|null",
+       "type": "null|string",
+       "student_count": "integer",
+       "common_section_names": [
+        "empty"
+       ]
+      }
+     ],
+     "substitute_periods": [
+      "empty"
+     ]
+    }
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/timetable/branch-staff-timetable/",
+   "query_keys": [
+    "section_mapping"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/diary"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": {
+     "period_system": [
+      {
+       "id": "integer",
+       "period_name": "string",
+       "position": "integer",
+       "start_time": "string(time)",
+       "end_time": "string(time)",
+       "is_break": "boolean"
+      }
+     ],
+     "week_days": {
+      "0": "string",
+      "1": "string",
+      "2": "string",
+      "3": "string",
+      "4": "string",
+      "5": "string",
+      "6": "string"
+     },
+     "week_holidays": {
+      "0": "null",
+      "1": "null",
+      "2": "null",
+      "3": "null",
+      "4": "null",
+      "5": "null",
+      "6": "null"
+     },
+     "teacher_periods": [
+      {
+       "id": "integer",
+       "period_id": "integer",
+       "period__period_name": "string",
+       "period__position": "integer",
+       "period__start_time": "string(time)",
+       "period__end_time": "string(time)",
+       "day": "integer",
+       "teacher_id": "integer",
+       "teacher__name": "string",
+       "teacher__erp_id": "string",
+       "teacher__teacher_type": "string",
+       "mapping_subject_id": "integer|null",
+       "mapping_subject__subject__subject_name": "null|string",
+       "is_draft": "boolean",
+       "is_delete": "boolean",
+       "dummy_teacher_id": "null",
+       "dummy_teacher__name": "null",
+       "is_sen": "boolean",
+       "student_id": "null",
+       "student__name": "null",
+       "student__erp_id": "null",
+       "common_group_id": "null",
+       "substitute_teacher_id": "null",
+       "substitute_teacher_erp_id": "null",
+       "substitute_teacher_name": "null",
+       "substitute_teacher_type": "null",
+       "sub_mapping_subject_id": "null",
+       "sub_subject_id": "null",
+       "sub_subject_subject_name": "null",
+       "common_section_names": [
+        "empty"
+       ],
+       "is_planner": "boolean"
+      }
+     ],
+     "sen_periods_overlay": [
+      "empty"
+     ],
+     "sen_student_ids": [
+      "empty"
+     ]
+    }
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/goal-tracker/periods/",
+   "query_keys": [
+    "period_type"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/goal-tracker"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": [
+     {
+      "id": "integer",
+      "year": "integer",
+      "period_type": "string",
+      "period_number": "integer",
+      "start_date": "string(date)",
+      "end_date": "string(date)",
+      "label": "string",
+      "is_active": "boolean"
+     }
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/goal-tracker/hierarchy/",
+   "query_keys": [],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/goal-tracker"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": {
+     "me": {
+      "id": "integer",
+      "user_id": "integer",
+      "auth_user_id": "integer",
+      "name": "string",
+      "erp_id": "string",
+      "designation": "string",
+      "department": "string",
+      "is_head": "boolean",
+      "report_to": {
+       "id": "integer",
+       "name": "string",
+       "erp_id": "string"
+      }
+     },
+     "reportees": [
+      "empty"
+     ],
+     "tree": {
+      "id": "integer",
+      "user_id": "integer",
+      "auth_user_id": "integer",
+      "name": "string",
+      "erp_id": "string",
+      "designation": "string",
+      "department": "string",
+      "children": [
+       "empty"
+      ]
+     },
+     "can_self_complete": "boolean"
+    }
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/goal-tracker/goals/",
+   "query_keys": [
+    "page_size",
+    "period_id"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/goal-tracker"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": {
+     "total": "integer",
+     "page": "integer",
+     "page_size": "integer",
+     "data": [
+      "empty"
+     ]
+    }
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/acms/meetings/",
+   "query_keys": [
+    "page",
+    "page_size"
+   ],
+   "statuses": [
+    "404"
+   ],
+   "screens": [
+    "/erp/meeting-scheduler"
+   ],
+   "resp_shape": null,
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "MGMT",
+   "path": "/qbox/lesson_plan/list-volume/",
+   "query_keys": [],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/online-books"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": {
+     "results": [
+      {
+       "id": "integer",
+       "volume_name": "string",
+       "is_delete": "boolean",
+       "created_by": "integer|null"
+      }
+     ]
+    }
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/academic/ebook-dropdown/",
+   "query_keys": [
+    "acad_session",
+    "book_type"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/online-books"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": [
+     {
+      "grade_id": "integer",
+      "grade__grade_name": "string",
+      "grade__eduvate_grade_id": "integer"
+     }
+    ],
+    "is_acms": "boolean"
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/academic/v1/ebook_school_wise_filter/",
+   "query_keys": [
+    "acad_session_id",
+    "academic_year",
+    "book_type",
+    "branch",
+    "domain_name",
+    "page_number",
+    "page_size",
+    "session_year"
+   ],
+   "statuses": [
+    "404"
+   ],
+   "screens": [
+    "/erp/online-books"
+   ],
+   "resp_shape": null,
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/erp_user/students-online-class/",
+   "query_keys": [
+    "end_date",
+    "page",
+    "page_size",
+    "start_date",
+    "status"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/online-class"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": {
+     "total": "integer",
+     "page": "string(numeric)",
+     "page_size": "string(numeric)",
+     "data": [
+      {
+       "id": "integer",
+       "title": "string",
+       "description": "string",
+       "sectionmapping__grade": "integer",
+       "sectionmapping__grade__grade_name": "string",
+       "sectionmapping__section": "integer",
+       "sectionmapping__section__section_name": "string",
+       "subject__subject_name": "string",
+       "subject": "integer",
+       "start_time": "string(datetime)",
+       "end_time": "string(datetime)",
+       "is_delete": "boolean",
+       "class_link": "string(url)",
+       "duration": "integer",
+       "host__name": "string",
+       "host__erp_id": "string",
+       "provider": "string",
+       "status": "string",
+       "zoom_join_url": "null",
+       "zoom_start_url": "null",
+       "zoom_meeting_id": "null",
+       "recording_status": "string",
+       "recording_play_url": "null",
+       "recording_password": "null",
+       "recording_bucket_status": "string",
+       "recording_bucket_url": "null"
+      }
+     ]
+    }
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/school-clicker/config/check/",
+   "query_keys": [
+    "acad_session"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/school-clicker"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "result": {
+     "enabled": "boolean",
+     "branch_id": "integer"
+    }
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/school-clicker/clickers/",
+   "query_keys": [
+    "acad_session",
+    "page",
+    "page_size"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/school-clicker"
+   ],
+   "resp_shape": {
+    "count": "integer",
+    "next": "null",
+    "previous": "null",
+    "results": [
+     "empty"
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/acms/curriculum/volumes/",
+   "query_keys": [],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/school-clicker"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "result": [
+     {
+      "id": "integer",
+      "name": "string",
+      "is_current": "boolean"
+     }
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/erp_user/profanity-txt/",
+   "query_keys": [],
+   "statuses": [
+    "404"
+   ],
+   "screens": [
+    "/erp/school-wall"
+   ],
+   "resp_shape": null,
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/school-feed/feed-draft/",
+   "query_keys": [
+    "acad_session",
+    "page",
+    "page_size",
+    "post_status"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/school-wall"
+   ],
+   "resp_shape": {
+    "message": "string",
+    "result": {
+     "next": "null",
+     "previous": "null",
+     "count": "integer",
+     "limit": "integer",
+     "current_page": "integer",
+     "total_pages": "integer",
+     "results": [
+      "empty"
+     ]
+    },
+    "status_code": "integer"
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/school-feed/comments-draft/",
+   "query_keys": [
+    "comments_status",
+    "page",
+    "page_size"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/school-wall"
+   ],
+   "resp_shape": {
+    "message": "string",
+    "result": {
+     "next": "null",
+     "previous": "null",
+     "count": "integer",
+     "limit": "integer",
+     "current_page": "integer",
+     "total_pages": "integer",
+     "results": [
+      "empty"
+     ]
+    },
+    "status_code": "integer"
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/test-module/my-results/",
+   "query_keys": [
+    "session_year"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/test-result"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "status": "string",
+    "message": "string",
+    "result": [
+     {
+      "id": "integer",
+      "paper": "string",
+      "test_type": "string",
+      "test_type_id": "integer",
+      "is_tutor": "boolean",
+      "sections": [
+       {
+        "name": "string",
+        "obtained": "integer",
+        "max": "integer",
+        "count": "integer",
+        "cut_off": "null",
+        "passed": "null"
+       }
+      ],
+      "total_obtained": "integer",
+      "total_possible": "integer",
+      "percentage": "integer",
+      "result": "string(empty)",
+      "submitted_at": "string(datetime)",
+      "rank": "null"
+     }
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "HRMS",
+   "path": "/qbox/payroll/kp/access/",
+   "query_keys": [],
+   "statuses": [
+    "200",
+    "None"
+   ],
+   "screens": [
+    "/recruitment/asset/your-assets",
+    "/recruitment/attendance",
+    "/recruitment/course/my-courses",
+    "/recruitment/document-center",
+    "/recruitment/employee-grievance/my-tickets",
+    "/recruitment/growth-action-plan/my-plan",
+    "/recruitment/holiday-calendar",
+    "/recruitment/leave-apply",
+    "/recruitment/my-referral",
+    "/recruitment/payroll/it-declaration",
+    "/recruitment/payroll/my-payslip",
+    "/recruitment/reimbursement/claim-history",
+    "/recruitment/resignation",
+    "/recruitment/transfers/apply-transfer",
+    "/recruitment/travel/my-travel-request"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": {
+     "is_kp_payroll_admin": "boolean"
+    }
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "HRMS",
+   "path": "/qbox/lms/training-reminders/",
+   "query_keys": [],
+   "statuses": [
+    "200",
+    "None"
+   ],
+   "screens": [
+    "/recruitment/asset/your-assets",
+    "/recruitment/attendance",
+    "/recruitment/course/my-courses",
+    "/recruitment/document-center",
+    "/recruitment/employee-grievance/my-tickets",
+    "/recruitment/growth-action-plan/my-plan",
+    "/recruitment/holiday-calendar",
+    "/recruitment/leave-apply",
+    "/recruitment/my-referral",
+    "/recruitment/payroll/it-declaration",
+    "/recruitment/payroll/my-payslip",
+    "/recruitment/reimbursement/claim-history",
+    "/recruitment/resignation",
+    "/recruitment/transfers/apply-transfer",
+    "/recruitment/travel/my-travel-request"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": [
+     "empty"
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "HRMS",
+   "path": "/qbox/asset/asset-items/",
+   "query_keys": [
+    "employee_id"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/recruitment/asset/your-assets"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": {
+     "results": [
+      {
+       "id": "string(uuid)",
+       "asset_code": "string",
+       "make": "string",
+       "model": "string",
+       "serial_number": "string",
+       "type": "integer",
+       "issue_type": "string",
+       "other": "null",
+       "procurement_date": "string(date)",
+       "asset_cost": "string(numeric)",
+       "warranty_expiry_date": "null",
+       "image": "string(empty)",
+       "description": "null",
+       "asset_config": "null",
+       "branch_id": "integer",
+       "branch_name": "string",
+       "status": "string",
+       "ownership": "null",
+       "condition": "null",
+       "remarks": "null",
+       "created_by": "integer",
+       "updated_by": "null",
+       "created_at": "string(datetime)",
+       "updated_at": "string(datetime)",
+       "active_assignment_id": "integer",
+       "assignment_type": "string",
+       "employee_id": "integer",
+       "employee_name": "string",
+       "employee_erp_id": "string",
+       "assigned_to_display": "string",
+       "location_name": "null"
+      }
+     ],
+     "status_counts": {
+      "available": "integer",
+      "assigned": "integer",
+      "maintenance": "integer",
+      "lost": "integer",
+      "disposed": "integer",
+      "damaged": "integer",
+      "permanently_deactivated": "integer",
+      "total": "integer"
+     }
+    }
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "HRMS",
+   "path": "/qbox/asset/asset-types/",
+   "query_keys": [],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/recruitment/asset/your-assets"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": [
+     {
+      "id": "integer",
+      "name": "string",
+      "asset_type_code_prefix": "string",
+      "asset_counter": "integer",
+      "created_at": "string(datetime)",
+      "updated_at": "string(datetime)"
+     }
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "HRMS",
+   "path": "/qbox/asset/asset-requests/",
+   "query_keys": [
+    "employee_id"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/recruitment/asset/your-assets"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": [
+     "empty"
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "HRMS",
+   "path": "/qbox/asset/subscription-assignments/",
+   "query_keys": [
+    "employee_id",
+    "status"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/recruitment/asset/your-assets"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": [
+     "empty"
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "HRMS",
+   "path": "/qbox/payroll/leave-types/",
+   "query_keys": [
+    "attendance",
+    "is_active"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/recruitment/attendance"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": [
+     {
+      "id": "integer",
+      "name": "string",
+      "code": "string",
+      "is_paid": "boolean",
+      "encashment_allowed": "boolean",
+      "description": "null|string",
+      "default_balance": "integer",
+      "carry_forward": "boolean",
+      "max_carry_forward_days": "integer|null",
+      "requires_document": "boolean",
+      "haf_day_allowed": "boolean",
+      "is_multiple_day_allowed": "boolean",
+      "is_active": "boolean",
+      "created_at": "string(datetime)",
+      "updated_at": "string(datetime)",
+      "is_apply_leave_without_balance": "boolean",
+      "allow_negative_balance": "boolean",
+      "max_negative_balance": "string(numeric)",
+      "auto_approve_after_days": "integer",
+      "approver_type": [
+       "integer"
+      ]
+     }
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "HRMS",
+   "path": "/qbox/payroll/reportees-dropdown/",
+   "query_keys": [
+    "include_reportees",
+    "page_size"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/recruitment/attendance"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": [
+     {
+      "id": "integer",
+      "name": "string",
+      "erp_id": "string",
+      "designation": "string",
+      "is_self": "boolean"
+     }
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "HRMS",
+   "path": "/qbox/payroll/payroll-cycle-lock/",
+   "query_keys": [
+    "payroll_month",
+    "payroll_year"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/recruitment/attendance"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": {
+     "id": "integer",
+     "cycle_name": "string",
+     "payroll_month": "string(numeric)",
+     "payroll_year": "string(numeric)",
+     "is_locked": "boolean",
+     "locked_at": "null",
+     "locked_by": "null",
+     "locked_by_name": "null",
+     "locked_by_erp_id": "null",
+     "status": "string"
+    }
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "HRMS",
+   "path": "/qbox/payroll/employee-attendance-details/",
+   "query_keys": [
+    "current_date",
+    "end_date",
+    "erp_id",
+    "start_date"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/recruitment/attendance"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": {
+     "erp_id": "string",
+     "employee_name": "string",
+     "first_erp": "string",
+     "joining_date": "string(date)",
+     "leaving_date": "null",
+     "period": {
+      "start_date": "string(date)",
+      "end_date": "string(date)",
+      "total_days": "integer"
+     },
+     "shift": {
+      "name": "string",
+      "start_time": "string(time)",
+      "end_time": "string(time)",
+      "in_margin": "string",
+      "out_margin": "string",
+      "window_start": "string(datetime)",
+      "window_end": "string(datetime)",
+      "swipe_type": "string",
+      "max_no_of_regularisation": "integer"
+     },
+     "summary": {
+      "present": "integer",
+      "absent": "integer",
+      "halfday": "integer",
+      "leaves": "integer",
+      "rest_days": "integer",
+      "holidays": "integer",
+      "grace_days_used": "integer",
+      "regularizations": "integer"
+     },
+     "daily_records": [
+      {
+       "date": "string(date)",
+       "day": "string",
+       "attendance_status": "string",
+       "is_grace_day": "boolean",
+       "is_activity_forgiven": "boolean",
+       "activity_remarks": "null",
+       "check_in_time": "string(empty)|string(time)",
+       "check_out_time": "string(empty)|string(time)",
+       "is_override": "boolean",
+       "is_rest_day": "boolean",
+       "is_holiday": "boolean",
+       "is_regularized": "boolean",
+       "regularization_status": "null",
+       "leaves": [
+        "empty"
+       ],
+       "is_half_day_leave": "boolean",
+       "is_any_leave_request_pending": "boolean",
+       "has_approved_comp_off": "boolean"
+      }
+     ]
+    }
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "HRMS",
+   "path": "/qbox/lms/my-courses/",
+   "query_keys": [
+    "course_type",
+    "is_active",
+    "page",
+    "page_size"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/recruitment/course/my-courses"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": {
+     "next": "null",
+     "previous": "null",
+     "count": "integer",
+     "limit": "integer",
+     "current_page": "integer",
+     "total_pages": "integer",
+     "results": [
+      "empty"
+     ]
+    }
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "HRMS",
+   "path": "/qbox/lms/teacher-cpd-hours/",
+   "query_keys": [],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/recruitment/course/my-courses"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": {
+     "user_id": "integer",
+     "user_name": "string",
+     "erp_id": "string",
+     "total_duration": "integer",
+     "completed_courses_count": "integer",
+     "certificate_count": "integer",
+     "courses": [
+      "empty"
+     ]
+    }
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "HRMS",
+   "path": "/qbox/document-center/summary/",
+   "query_keys": [],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/recruitment/document-center"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": {
+     "viewing": {
+      "is_self": "boolean",
+      "erp_id": "string",
+      "employee_name": "string",
+      "can_view_others": "boolean"
+     },
+     "documents": "integer",
+     "payslips": "integer",
+     "company_policies": "integer"
+    }
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "HRMS",
+   "path": "/qbox/grievance-module/employee-team-member-check/",
+   "query_keys": [],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/recruitment/employee-grievance/my-tickets"
+   ],
+   "resp_shape": {
+    "is_team_member": "boolean",
+    "is_sme": "boolean",
+    "is_super_poc": "boolean",
+    "super_poc_groups": [
+     "empty"
+    ],
+    "handler_groups": [
+     "empty"
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "HRMS",
+   "path": "/qbox/grievance-module/employee-ticket/",
+   "query_keys": [
+    "page",
+    "page_size",
+    "scope"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/recruitment/employee-grievance/my-tickets"
+   ],
+   "resp_shape": {
+    "count": "integer",
+    "current_page": "integer",
+    "next": "null",
+    "previous": "null",
+    "results": [
+     {
+      "id": "integer",
+      "employee_ticket_response": [
+       {
+        "id": "integer",
+        "replied_by_name": "string|string(empty)",
+        "reply": "string",
+        "replied_by": "string",
+        "replied_at": "string(datetime)",
+        "file": "null",
+        "is_deleted": "boolean",
+        "is_read": "boolean",
+        "reply_type": "string",
+        "window": "string",
+        "visible_to_other": "boolean",
+        "ticket": "integer",
+        "created_by__name": "string|string(empty)",
+        "created_by__erp_id": "string",
+        "attachments": [
+         "empty"
+        ],
+        "media": [
+         "empty"
+        ]
+       }
+      ],
+      "ticket": [
+       "mixed"
+      ],
+      "assigned_to_name": "string",
+      "assign_to_second_level_name": "null|string",
+      "sme_name": "null|string",
+      "substitute_cover": "null",
+      "new_response": "boolean",
+      "tat_time": "string",
+      "ticket_priority_name": "string",
+      "is_unresponse": "boolean",
+      "first_response": "string(empty)",
+      "branch_name": "string",
+      "merged_tickets": [
+       "empty"
+      ],
+      "department_name": "string",
+      "designation_name": "string",
+      "is_special_category": "boolean",
+      "viewer_role": "null",
+      "viewer_can_view_all_details": "null",
+      "viewer_is_group_super_poc": "null",
+      "subject": "string",
+      "description": "string",
+      "file": "string(url)",
+      "ticket_status": "string",
+      "ticket_priority": "integer",
+      "created_at": "string(datetime)",
+      "updated_at": "string(datetime)",
+      "branch_id": "string(numeric)",
+      "is_deleted": "boolean",
+      "due_date": "string(datetime)",
+      "resolved_date": "string(datetime)",
+      "re_opened_date": "null",
+      "ticket_number": "string(numeric)",
+      "feature_request_number": "null",
+      "tat_start_at": "string(datetime)",
+      "sensitivity": "string",
+      "gmail_uid": "null",
+      "mailed_at": "null",
+      "remarks": "null",
+      "internal_resolved_date": "null",
+      "closure_token": "null",
+      "closure_token_expiry": "null",
+      "last_reminder_sent_at": "null",
+      "attendance_branch_id": "integer",
+      "cc_users": [
+       "empty|string"
+      ],
+      "reopen_count": "integer",
+      "internal_visible_to_employee": "boolean",
+      "employee_visible_to_members": "boolean",
+      "should_take_feedback": "boolean",
+      "closed_at": "string(datetime)",
+      "auto_resolved": "boolean",
+      "raised_against": [
+       "empty"
+      ],
+      "routed_to_super_poc": "boolean",
+      "info_request_ask_questions": "boolean",
+      "raised_by": "string",
+      "assigned_to": "string",
+      "assign_to_second_level": "null|string",
+      "sme_erp_id": "null|string",
+      "updated_by": "string",
+      "created_by": "string",
+      "deleted_by": "null",
+      "ref_ticket": "null",
+      "parent_ticket": "null",
+      "second_point_of_contact": "null",
+      "designation": "integer",
+      "department": "integer",
+      "raised_by_staff_id": "integer",
+      "raised_by__name": "string",
+      "raised_by__erp_id": "string",
+      "email": "string(email)",
+      "contact": "string",
+      "employee_name": "string",
+      "assigned_to__name": "string",
+      "assigned_to__erp_id": "string",
+      "raised_by_details": {
+       "staff_id": "integer",
+       "erp_id": "string",
+       "name": "string",
+       "email": "string(email)",
+       "contact": "string"
+      },
+      "created_by_details": {
+       "erp_id": "string",
+       "name": "string",
+       "is_self": "boolean"
+      },
+      "poc_details": {
+       "erp_id": "string",
+       "name": "string"
+      },
+      "sme_details": {
+       "erp_id": "string|string(empty)",
+       "name": "string|string(empty)"
+      },
+      "raised_against_details": [
+       "empty"
+      ],
+      "group": "integer",
+      "category": "integer",
+      "sub_category": "integer",
+      "group_name": "string",
+      "category_name": "string",
+      "sub_category_name": "string",
+      "sub_category__sub_category_name": "string",
+      "sub_category__category": "integer",
+      "sub_category__category__category_name": "string",
+      "second_level_sme_only": "boolean",
+      "media": [
+       "string(url)"
+      ],
+      "first_resolution_due": "string(datetime)",
+      "duplicate_count": "integer",
+      "viewer_participant": "null",
+      "viewer_tags": [
+       "empty"
+      ],
+      "can_accept": "boolean",
+      "is_sub_ticket": "boolean",
+      "parent_ticket_number": "null",
+      "parent_ticket_details": "null",
+      "sub_tickets": [
+       "empty"
+      ],
+      "sub_ticket_count": "integer",
+      "open_sub_ticket_count": "integer",
+      "is_duplicate": "boolean",
+      "ref_ticket_number": "null",
+      "phone": "string",
+      "erp_id": "string",
+      "attendance_branch_name": "string",
+      "answers": [
+       "empty"
+      ],
+      "participants": [
+       "empty"
+      ],
+      "cc_user_details": [
+       "mixed"
+      ],
+      "unread_count": "integer",
+      "unread_internal_count": "integer",
+      "has_unread": "boolean",
+      "pending_reply": "boolean",
+      "active_approval": "null",
+      "last_approval": "null"
+     }
+    ],
+    "status_counts": {
+     "open_tickets": "integer",
+     "pending_tickets": "integer",
+     "resloved_tickets": "integer",
+     "closed_tickets": "integer",
+     "re_open_tickets": "integer",
+     "invalid_tickets": "integer",
+     "overdue_tickets": "integer",
+     "pending_approval_tickets": "integer",
+     "active_tickets": "integer",
+     "duplicate_tickets": "integer"
+    },
+    "has_active_request": "boolean",
+    "scope_counts": {
+     "mine": "integer",
+     "assigned_to_me": "integer"
+    }
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "HRMS",
+   "path": "/qbox/grievance-module/employee-ticket-category-group/",
+   "query_keys": [
+    "page_size"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/recruitment/employee-grievance/my-tickets"
+   ],
+   "resp_shape": {
+    "count": "integer",
+    "current_page": "integer",
+    "next": "null",
+    "previous": "null",
+    "results": [
+     {
+      "id": "integer",
+      "name": "string",
+      "group_name": "string",
+      "allow_multiple_pocs": "boolean",
+      "default_poc": "string",
+      "super_pocs": [
+       {
+        "id": "integer",
+        "erp_id": "string",
+        "name": "string"
+       }
+      ],
+      "is_deleted": "boolean",
+      "created_by": "string",
+      "updated_by": "null",
+      "created_at": "string(datetime)",
+      "updated_at": "string(datetime)"
+     }
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "HRMS",
+   "path": "/qbox/grievance-module/employee-detail/",
+   "query_keys": [
+    "erp_id"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/recruitment/employee-grievance/my-tickets"
+   ],
+   "resp_shape": {
+    "name": "string",
+    "erp_id": "string",
+    "contact": "string",
+    "gender": "string",
+    "email": "string(email)",
+    "branch_id": "integer",
+    "branch_name": "string",
+    "department": "integer",
+    "department_name": "string",
+    "designation": "integer",
+    "designation_name": "string",
+    "attendance_branch_id": "integer",
+    "attendance_branch_name": "string"
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "HRMS",
+   "path": "/qbox/pip/my-plan/",
+   "query_keys": [],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/recruitment/growth-action-plan/my-plan"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": "null"
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "HRMS",
+   "path": "/qbox/payroll/user-holiday/",
+   "query_keys": [
+    "session_year"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/recruitment/holiday-calendar"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": {
+     "Jan": [
+      {
+       "name": "string",
+       "holiday_date": "string(date)",
+       "session_year": "string(numeric)",
+       "description": "null"
+      }
+     ],
+     "Feb": [
+      {
+       "name": "string",
+       "holiday_date": "string(date)",
+       "session_year": "string(numeric)",
+       "description": "null"
+      }
+     ],
+     "Mar": [
+      {
+       "name": "string",
+       "holiday_date": "string(date)",
+       "session_year": "string(numeric)",
+       "description": "null"
+      }
+     ],
+     "Apr": [
+      {
+       "name": "string",
+       "holiday_date": "string(date)",
+       "session_year": "string(numeric)",
+       "description": "null"
+      }
+     ],
+     "May": [
+      {
+       "name": "string",
+       "holiday_date": "string(date)",
+       "session_year": "string(numeric)",
+       "description": "null"
+      }
+     ],
+     "Jun": [
+      {
+       "name": "string",
+       "holiday_date": "string(date)",
+       "session_year": "string(numeric)",
+       "description": "null"
+      }
+     ],
+     "Jul": [
+      {
+       "name": "string",
+       "holiday_date": "string(date)",
+       "session_year": "string(numeric)",
+       "description": "null"
+      }
+     ],
+     "Aug": [
+      {
+       "name": "string",
+       "holiday_date": "string(date)",
+       "session_year": "string(numeric)",
+       "description": "null"
+      }
+     ],
+     "Sep": [
+      {
+       "name": "string",
+       "holiday_date": "string(date)",
+       "session_year": "string(numeric)",
+       "description": "null"
+      }
+     ],
+     "Oct": [
+      {
+       "name": "string",
+       "holiday_date": "string(date)",
+       "session_year": "string(numeric)",
+       "description": "null"
+      }
+     ],
+     "Nov": [
+      {
+       "name": "string",
+       "holiday_date": "string(date)",
+       "session_year": "string(numeric)",
+       "description": "null"
+      }
+     ],
+     "Dec": [
+      {
+       "name": "string",
+       "holiday_date": "string(date)",
+       "session_year": "string(numeric)",
+       "description": "null"
+      }
+     ]
+    }
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "HRMS",
+   "path": "/qbox/payroll/leave-applications/",
+   "query_keys": [
+    "application_type",
+    "page",
+    "page_size",
+    "status"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/recruitment/leave-apply"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": {
+     "next": "null",
+     "previous": "null",
+     "count": "integer",
+     "limit": "integer",
+     "current_page": "integer",
+     "total_pages": "integer",
+     "results": [
+      "empty"
+     ]
+    }
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "HRMS",
+   "path": "/qbox/lead-mgmt/employee-refferal-history/",
+   "query_keys": [
+    "page",
+    "page_size"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/recruitment/my-referral"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": {
+     "next": "null",
+     "previous": "null",
+     "count": "integer",
+     "limit": "integer",
+     "current_page": "integer",
+     "total_pages": "integer",
+     "results": [
+      "empty"
+     ]
+    }
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "HRMS",
+   "path": "/qbox/payroll/tax-declaration-summary/",
+   "query_keys": [
+    "financial_year"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/recruitment/payroll/it-declaration"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": {
+     "financial_year": "string",
+     "tax_regime": "null",
+     "status": "string",
+     "window_status": "string",
+     "is_window_open": "boolean",
+     "last_updated": "null",
+     "sections": [
+      {
+       "section": "string",
+       "max_limit": "integer|null",
+       "declared_amount": "integer",
+       "eligible_amount": "integer",
+       "has_declarations": "boolean",
+       "declaration_count": "integer"
+      }
+     ],
+     "totals": {
+      "total_declared": "integer",
+      "total_eligible": "integer"
+     }
+    }
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "HRMS",
+   "path": "/qbox/payroll/employee-payslip/",
+   "query_keys": [
+    "employee_id",
+    "month-year"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/recruitment/payroll/my-payslip"
+   ],
+   "resp_shape": {
+    "success": "boolean",
+    "message": "string",
+    "data": {
+     "employee_name": "string",
+     "employee_code": "string",
+     "bank_name": "null",
+     "account_number": "string(numeric)",
+     "cycle_name": "string",
+     "payroll_month": "string(numeric)",
+     "payroll_year": "string(numeric)",
+     "cycle_start_date": "string(date)",
+     "cycle_end_date": "string(date)",
+     "gross_salary": "integer",
+     "total_deductions": "integer",
+     "net_salary": "integer",
+     "it_gross": "integer",
+     "basic_salary": "integer",
+     "hra": "integer",
+     "pf_deduction": "integer",
+     "income_tax": "integer",
+     "professional_tax": "integer",
+     "esic_deduction": "integer",
+     "employer_pf": "integer",
+     "employer_esic": "integer",
+     "gratuity": "integer",
+     "max_no_of_days": "integer",
+     "paid_days": "integer",
+     "paid_sessions": "integer",
+     "lop_days": "integer",
+     "reversal_arrears_days": "integer",
+     "nj_arrears_days": "integer",
+     "arrear_amount": "integer",
+     "status": "string",
+     "calculated_at": "string(datetime)",
+     "approved_at": "null",
+     "payslip_generated": "boolean",
+     "payslip_url": "string(url)",
+     "employee_details": {
+      "id": "integer",
+      "pt_disability_disabled_by_name": "null",
+      "pt_disability_exemption_logs": [
+       "empty"
+      ],
+      "gender": "string",
+      "pay_type": "string",
+      "business_category": "string",
+      "collar": "string",
+      "cost_center": "string",
+      "sub_level": "string",
+      "job_type": "string",
+      "joining_date": "string(date)",
+      "leaving_date": "null",
+      "date_of_birth": "string(date)",
+      "pan_number": "string",
+      "aadhar_number": "string(numeric)",
+      "aadhar_name": "null",
+      "account_no": "string(numeric)",
+      "ifsc_code": "string",
+      "pf_opted": "boolean",
+      "voluntary_pf": "null",
+      "epf_excess_contribution": "boolean",
+      "esic_opted": "boolean",
+      "nps_opted": "boolean",
+      "pension_opt": "boolean",
+      "nps_rate": "integer",
+      "pran_number": "null",
+      "pf_account_number": "null",
+      "uan_number": "null",
+      "pf_dop": "null",
+      "esic_number": "null",
+      "first_erp": "string",
+      "fhd": "string(date)",
+      "pt_disability_exemption": "boolean",
+      "pt_disability_remarks": "null",
+      "pt_disability_document": "null",
+      "pt_disability_disabled_at": "null",
+      "confirmation_date": "null",
+      "international_employee": "boolean",
+      "pan_operative_status": "boolean",
+      "first_hire_date": "string(date)",
+      "probation_period": "string(numeric)",
+      "notice_period": "integer",
+      "is_settlement": "boolean",
+      "is_backout": "boolean",
+      "backout_reson": "null",
+      "relieving_experience_letter": "null",
+      "entity": "integer",
+      "designation": "integer",
+      "employee": "integer",
+      "pt_disability_disabled_by": "null",
+      "shift": "string(uuid)",
+      "leave_scheme": "integer",
+      "email": "string(email)"
+     },
+     "components": [
+      {
+       "component_name": "string",
+       "component_type": "string",
+       "amount": "integer",
+       "description": "null"
+      }
+     ],
+     "created_at": "string(datetime)",
+     "updated_at": "string(datetime)"
+    }
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "FIN",
+   "path": "/qbox/apiV1/v2/reimbursement-form/",
+   "query_keys": [
+    "erp_id",
+    "include_withdrawn",
+    "is_draft",
+    "is_local_conveyance",
+    "page",
+    "page_size",
+    "request_kind"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/recruitment/reimbursement/claim-history"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": {
+     "total": "integer",
+     "page": "integer",
+     "page_size": "integer",
+     "data": [
+      "empty"
+     ]
+    }
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "HRMS",
+   "path": "/qbox/exit-mgmt/resignation-request/",
+   "query_keys": [
+    "view_type"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/recruitment/resignation"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": [
+     "empty"
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "HRMS",
+   "path": "/qbox/central-db/branch-view/",
+   "query_keys": [
+    "is_active"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/recruitment/transfers/apply-transfer",
+    "/recruitment/travel/my-travel-request"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": [
+     {
+      "id": "integer",
+      "branch_name": "string",
+      "is_delete": "boolean",
+      "zone": {
+       "id": "integer",
+       "zone_name": "string",
+       "is_delete": "boolean"
+      },
+      "city_fk": {
+       "id": "integer",
+       "city_name": "string",
+       "is_delete": "boolean"
+      },
+      "school_type": "string(numeric)",
+      "school_type_name": "string",
+      "address": "string",
+      "latitude": "integer|number",
+      "longitude": "integer|number",
+      "brand": {
+       "id": "integer",
+       "code": "string",
+       "name": "string",
+       "short_name": "string",
+       "erp_id_suffix": "null|string"
+      },
+      "branch_code": "string(numeric)"
+     }
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "HRMS",
+   "path": "/qbox/user-mgmt/department-list/",
+   "query_keys": [
+    "access",
+    "is_active"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/recruitment/transfers/apply-transfer"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": [
+     {
+      "id": "integer",
+      "department_name": "string",
+      "department_code": "string",
+      "category": "string",
+      "description": "string(empty)",
+      "sub_level": "null|string",
+      "is_active": "boolean",
+      "created_at": "string(datetime)",
+      "updated_at": "string(datetime)",
+      "super_department": "integer"
+     }
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "HRMS",
+   "path": "/qbox/user-mgmt/designation-list/",
+   "query_keys": [
+    "access",
+    "is_active"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/recruitment/transfers/apply-transfer"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": [
+     {
+      "id": "integer",
+      "department": {
+       "id": "integer",
+       "department_name": "string"
+      },
+      "role_preference": [
+       "empty|mixed"
+      ],
+      "name": "string",
+      "mail_id_policy": "string",
+      "job_description": "null",
+      "greythr_id": "null",
+      "is_active": "boolean",
+      "is_delete": "boolean",
+      "collar_type": "string",
+      "is_recruiter_screening_required": "boolean",
+      "created_at": "string(datetime)",
+      "updated_at": "null",
+      "created_by": "integer"
+     }
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "HRMS",
+   "path": "/qbox/lead-mgmt/internal-transfer-request/",
+   "query_keys": [
+    "page",
+    "page_size",
+    "view_type"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/recruitment/transfers/apply-transfer"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": [
+     "empty"
+    ]
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "HRMS",
+   "path": "/qbox/travel/travel-request/",
+   "query_keys": [
+    "page",
+    "page_size",
+    "view_type"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/recruitment/travel/my-travel-request"
+   ],
+   "resp_shape": {
+    "status_code": "integer",
+    "message": "string",
+    "result": {
+     "next": "null",
+     "previous": "null",
+     "count": "integer",
+     "limit": "integer",
+     "current_page": "integer",
+     "total_pages": "integer",
+     "results": [
+      "empty"
+     ],
+     "progress_counts": {
+      "approval": "integer",
+      "booking": "integer",
+      "partly": "integer"
+     },
+     "tab_counts": {
+      "ongoing": "integer",
+      "upcoming": "integer",
+      "history": "integer"
+     }
+    }
+   },
+   "req_shape": null
+  },
+  {
+   "method": "GET",
+   "service": "ERP",
+   "path": "/qbox/academic/lp-grade-subject-list/",
+   "query_keys": [
+    "acad_session"
+   ],
+   "statuses": [
+    "200"
+   ],
+   "screens": [
+    "/erp/lesson-plan"
+   ],
+   "resp_shape": {
+    "message": "string",
+    "result": [
+     {
+      "grade_id": "integer",
+      "grade__grade_name": "string",
+      "grade__eduvate_grade_id": "integer"
+     }
+    ],
+    "status_code": "integer",
+    "is_acms": "boolean"
+   },
+   "req_shape": null
+  }
+ ]
+}

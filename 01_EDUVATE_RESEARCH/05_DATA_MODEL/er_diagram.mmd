@@ -1,0 +1,117 @@
+%% Proposed ER diagram for the replacement school ERP (core + core+).
+%% Audit 2026-11-23: Zone/City corrected (ER-36); TEACHING_ASSIGNMENT, USER_GRANT, STAFF_ABSENCE and role-assignment scope added.
+%% Keys, tenant_id and scoping columns for the Phase 0-2 core: see er_diagram_core_v2.mmd (authoritative where they differ).
+%% Relationships marked "(inferred)" in labels are not directly evidenced; the rest are
+%% backed by observed API field names (see entity_dictionary.md for provenance).
+erDiagram
+  TENANT ||--o{ ZONE : "defines (optional grouping)"
+  TENANT ||--o{ CITY : "defines (optional grouping)"
+  ZONE |o--o{ BRANCH : "groups (independent of city; audit ER-36)"
+  CITY |o--o{ BRANCH : locates
+  TENANT ||--o{ BRANCH : owns
+  TENANT ||--o{ ACADEMIC_YEAR : defines
+  BRANCH ||--o{ BRANCH_ACADEMIC_YEAR : "runs in"
+  ACADEMIC_YEAR ||--o{ BRANCH_ACADEMIC_YEAR : scopes
+  BRANCH_ACADEMIC_YEAR ||--o{ GRADE_OFFERING : offers
+  GRADE ||--o{ GRADE_OFFERING : "offered as"
+  GRADE_OFFERING ||--o{ CLASS_SECTION : "split into"
+  SECTION ||--o{ CLASS_SECTION : names
+  CLASS_SECTION ||--o{ CLASS_SUBJECT : teaches
+  SUBJECT ||--o{ CLASS_SUBJECT : "taught as"
+
+  USER ||--o| STAFF : "is (staff)"
+  USER ||--o| STUDENT : "is (student)"
+  USER ||--o| GUARDIAN : "is (parent)"
+  USER ||--o{ ROLE_ASSIGNMENT : holds
+  ROLE ||--o{ ROLE_ASSIGNMENT : "assigned via"
+  ACADEMIC_YEAR |o--o{ ROLE_ASSIGNMENT : "limits (scope_type, scope_id, optional year)"
+  USER ||--o{ USER_GRANT : "time-bound grant (replaces hard-coded ID lists)"
+  PERMISSION ||--o{ USER_GRANT : grants
+  ROLE ||--o{ ROLE_PERMISSION : grants
+  PERMISSION ||--o{ ROLE_PERMISSION : "granted by"
+
+  STUDENT ||--o{ STUDENT_ENROLMENT : "enrolled per year"
+  CLASS_SECTION ||--o{ STUDENT_ENROLMENT : contains
+  ACADEMIC_YEAR ||--o{ STUDENT_ENROLMENT : "for year"
+  STUDENT ||--o{ STUDENT_GUARDIAN : "has"
+  GUARDIAN ||--o{ STUDENT_GUARDIAN : "cares for"
+
+  BRANCH_ACADEMIC_YEAR ||--o{ PERIOD_SYSTEM : uses
+  PERIOD_SYSTEM ||--o{ PERIOD : "ordered periods"
+  PERIOD ||--o{ TIMETABLE_SLOT : "slot in"
+  CLASS_SECTION ||--o{ TIMETABLE_SLOT : "scheduled for"
+  CLASS_SUBJECT ||--o{ TIMETABLE_SLOT : "subject of"
+  STAFF ||--o{ TIMETABLE_SLOT : teaches
+  TIMETABLE_SLOT ||--o{ SUBSTITUTION : "covered by"
+  STAFF ||--o{ SUBSTITUTION : substitutes
+  STAFF ||--o{ STAFF_ABSENCE : "absent on (PROPOSED, needed for substitution)"
+  STAFF_ABSENCE |o--o{ SUBSTITUTION : causes
+  STAFF ||--o{ TEACHING_ASSIGNMENT : "assigned to (PROPOSED; source of teacher scope)"
+  CLASS_SECTION ||--o{ TEACHING_ASSIGNMENT : "staffed by"
+  CLASS_SUBJECT |o--o{ TEACHING_ASSIGNMENT : "taught by"
+
+  ACADEMIC_YEAR ||--o{ CALENDAR_EVENT : contains
+  CALENDAR_EVENT }o--o{ BRANCH : "scoped to"
+  CALENDAR_EVENT }o--o{ GRADE : "scoped to"
+  CALENDAR_EVENT |o--o| ASSESSMENT : "schedules"
+
+  STAFF ||--o{ DIARY_ENTRY : writes
+  DIARY_ENTRY }o--o{ CLASS_SECTION : "for sections"
+  DIARY_ENTRY }o--o{ SUBJECT : "for subjects"
+  DIARY_ENTRY ||--o{ HOMEWORK_SUBMISSION : receives
+  STUDENT ||--o{ HOMEWORK_SUBMISSION : submits
+
+  STUDENT ||--o{ STUDENT_ATTENDANCE : has
+  CLASS_SECTION ||--o{ STUDENT_ATTENDANCE : "taken in"
+  STAFF ||--o{ STUDENT_ATTENDANCE : marks
+
+  CLASS_SECTION ||--o{ ONLINE_CLASS : hosts
+  STAFF ||--o{ ONLINE_CLASS : "is host"
+
+  VOLUME ||--o{ CHAPTER : contains
+  CHAPTER ||--o{ TOPIC : contains
+  CHAPTER ||--o{ LESSON_PLAN_PERIOD : "planned as"
+  LESSON_PLAN_PERIOD ||--o{ LESSON_PLAN_COMPLETION : "completed in"
+  CLASS_SECTION ||--o{ LESSON_PLAN_COMPLETION : tracks
+
+  EXAM_TYPE ||--o{ ASSESSMENT : classifies
+  GRADE ||--o{ ASSESSMENT : "for grade"
+  SUBJECT ||--o{ ASSESSMENT : "for subject"
+  ASSESSMENT ||--o{ ASSESSMENT_BRANCH : "assigned to"
+  BRANCH ||--o{ ASSESSMENT_BRANCH : receives
+  ASSESSMENT ||--o{ QUESTION_PAPER : "has papers"
+  QUESTION_PAPER }o--o{ QUESTION : includes
+  ASSESSMENT ||--o{ MARKS_ENTRY : records
+  STUDENT ||--o{ MARKS_ENTRY : scores
+  GRADING_SYSTEM ||--o{ REPORT_CARD_TEMPLATE : grades
+  REPORT_CARD_TEMPLATE }o--o{ ASSESSMENT : "weights (inferred)"
+  REPORT_CARD_TEMPLATE ||--o{ REPORT_CARD_RUN : generates
+  REPORT_CARD_RUN ||--o{ STUDENT_REPORT_CARD : produces
+  STUDENT ||--o{ STUDENT_REPORT_CARD : receives
+
+  USER ||--o{ NOTIFICATION : receives
+  STAFF ||--o{ ANNOUNCEMENT : authors
+  ANNOUNCEMENT ||--o{ ANNOUNCEMENT_RECIPIENT : "delivered to"
+  USER ||--o{ ANNOUNCEMENT_RECIPIENT : reads
+  GUARDIAN ||--o{ TICKET : raises
+  TICKET ||--o{ TICKET_MESSAGE : thread
+  STUDENT ||--o{ TICKET : "about (inferred)"
+
+  ACADEMIC_YEAR ||--o{ FEE_TERM : schedules
+  FEE_PLAN ||--o{ FEE_PLAN_LINE : "components"
+  FEE_HEAD ||--o{ FEE_PLAN_LINE : "typed by"
+  FEE_TERM ||--o{ FEE_PLAN_LINE : "due in"
+  STUDENT ||--o{ STUDENT_FEE_ASSIGNMENT : "billed by"
+  FEE_PLAN ||--o{ STUDENT_FEE_ASSIGNMENT : "applied to"
+  STUDENT ||--o{ CONCESSION : gets
+  STUDENT ||--o{ PAYMENT : pays
+  PAYMENT ||--o| RECEIPT : "evidenced by"
+  STUDENT ||--o{ WALLET : owns
+  WALLET ||--o{ WALLET_TXN : records
+
+  BRANCH ||--o{ TRANSPORT_ROUTE : operates
+  TRANSPORT_ROUTE ||--o{ STOP : "has stops"
+  VEHICLE ||--o{ TRIP_SCHEDULE : runs
+  TRANSPORT_ROUTE ||--o{ TRIP_SCHEDULE : "scheduled on"
+  STUDENT ||--o{ STUDENT_TRANSPORT : uses
+  STOP ||--o{ STUDENT_TRANSPORT : "boards at"

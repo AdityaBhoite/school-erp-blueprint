@@ -1,0 +1,2559 @@
+{
+ "note": "Value-free runtime API shapes newly observed by the Phase 3 read-only route crawl (teacher account). No values, headers, cookies or tokens. Paths normalized; IDs masked.",
+ "new_endpoints": [
+  {
+   "service": "CHAT",
+   "method": "GET",
+   "path": "/api/v4/channels/{id}/stats",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "exclude_files_count"
+   ],
+   "resp_shape": {
+    "channel_id": "string",
+    "member_count": "number",
+    "guest_count": "number",
+    "pinnedpost_count": "number",
+    "files_count": "number"
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "CHAT",
+   "method": "GET",
+   "path": "/api/v4/system/notices/{id}",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "client",
+    "clientVersion"
+   ],
+   "resp_shape": [
+    "empty"
+   ],
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "CHAT",
+   "method": "GET",
+   "path": "/api/v4/teams",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "exclude_policy_constrained",
+    "include_total_count",
+    "page",
+    "per_page"
+   ],
+   "resp_shape": [
+    "empty"
+   ],
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "CHAT",
+   "method": "GET",
+   "path": "/api/v4/trial-license/prev",
+   "statuses": [
+    "429"
+   ],
+   "query_keys": [],
+   "resp_shape": null,
+   "req_shape": null,
+   "mime": [
+    "text/plain"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "CHAT",
+   "method": "GET",
+   "path": "/api/v4/users",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "page",
+    "per_page"
+   ],
+   "resp_shape": [
+    {
+     "id": "string",
+     "create_at": "number",
+     "update_at": "number",
+     "delete_at": "number",
+     "username": "string(numeric)|string",
+     "auth_data": "string(empty)",
+     "auth_service": "string(empty)",
+     "email": "string(email)",
+     "nickname": "string(empty)",
+     "first_name": "string",
+     "last_name": "string(empty)|string",
+     "position": "string(empty)",
+     "roles": "string",
+     "locale": "string",
+     "timezone": {
+      "automaticTimezone": "string(empty)",
+      "manualTimezone": "string(empty)",
+      "useAutomaticTimezone": "string"
+     },
+     "remote_id": "string(empty)",
+     "disable_welcome_email": "boolean",
+     "erp_id": "number"
+    }
+   ],
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "CHAT",
+   "method": "GET",
+   "path": "/api/v4/users/me",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [],
+   "resp_shape": {
+    "id": "string",
+    "create_at": "number",
+    "update_at": "number",
+    "delete_at": "number",
+    "username": "string(numeric)",
+    "auth_service": "string(empty)",
+    "email": "string(email)",
+    "nickname": "string(empty)",
+    "first_name": "string",
+    "last_name": "string(empty)",
+    "position": "string(empty)",
+    "roles": "string",
+    "notify_props": {
+     "channel": "string",
+     "comments": "string",
+     "desktop": "string",
+     "desktop_sound": "string",
+     "desktop_threads": "string",
+     "email": "string",
+     "email_threads": "string",
+     "first_name": "string",
+     "mention_keys": "string(empty)",
+     "push": "string",
+     "push_status": "string",
+     "push_threads": "string"
+    },
+    "last_password_update": "number",
+    "locale": "string",
+    "timezone": {
+     "automaticTimezone": "string",
+     "manualTimezone": "string(empty)",
+     "useAutomaticTimezone": "string"
+    },
+    "remote_id": "string(empty)",
+    "disable_welcome_email": "boolean",
+    "erp_id": "number"
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "CHAT",
+   "method": "GET",
+   "path": "/api/v4/users/me/channels",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [],
+   "resp_shape": [
+    {
+     "id": "string",
+     "create_at": "number",
+     "update_at": "number",
+     "delete_at": "number",
+     "team_id": "string",
+     "type": "string",
+     "display_name": "string",
+     "name": "string",
+     "header": "string(empty)",
+     "purpose": "string(empty)",
+     "last_post_at": "number",
+     "total_msg_count": "number",
+     "extra_update_at": "number",
+     "creator_id": "string(empty)",
+     "scheme_id": "null",
+     "props": "null",
+     "group_constrained": "null",
+     "shared": "null",
+     "total_msg_count_root": "number",
+     "policy_id": "null",
+     "last_root_post_at": "number",
+     "banner_info": "null",
+     "policy_enforced": "boolean",
+     "default_category_name": "string(empty)"
+    }
+   ],
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "CHAT",
+   "method": "GET",
+   "path": "/api/v4/users/me/preferences",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [],
+   "resp_shape": [
+    {
+     "user_id": "string",
+     "category": "string",
+     "name": "string",
+     "value": "string(numeric)|string"
+    }
+   ],
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "CHAT",
+   "method": "GET",
+   "path": "/api/v4/users/me/teams",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [],
+   "resp_shape": [
+    {
+     "id": "string",
+     "create_at": "number",
+     "update_at": "number",
+     "delete_at": "number",
+     "display_name": "string",
+     "name": "string",
+     "description": "string(empty)",
+     "email": "string(empty)",
+     "type": "string",
+     "company_name": "string(empty)",
+     "allowed_domains": "string",
+     "invite_id": "string",
+     "allow_open_invite": "boolean",
+     "last_team_icon_update": "number",
+     "scheme_id": "string(empty)",
+     "group_constrained": "boolean",
+     "policy_id": "null",
+     "cloud_limits_archived": "boolean"
+    }
+   ],
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "CHAT",
+   "method": "GET",
+   "path": "/api/v4/users/me/teams/members",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [],
+   "resp_shape": [
+    {
+     "team_id": "string",
+     "user_id": "string",
+     "roles": "string",
+     "delete_at": "number",
+     "scheme_guest": "boolean",
+     "scheme_user": "boolean",
+     "scheme_admin": "boolean",
+     "explicit_roles": "string(empty)"
+    }
+   ],
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "CHAT",
+   "method": "GET",
+   "path": "/api/v4/users/me/teams/unread",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "include_collapsed_threads"
+   ],
+   "resp_shape": [
+    {
+     "team_id": "string",
+     "msg_count": "number",
+     "mention_count": "number",
+     "mention_count_root": "number",
+     "msg_count_root": "number",
+     "thread_count": "number",
+     "thread_mention_count": "number",
+     "thread_urgent_mention_count": "number"
+    }
+   ],
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "CHAT",
+   "method": "GET",
+   "path": "/api/v4/users/me/teams/{id}/channels",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "include_deleted"
+   ],
+   "resp_shape": [
+    {
+     "id": "string",
+     "create_at": "number",
+     "update_at": "number",
+     "delete_at": "number",
+     "team_id": "string",
+     "type": "string",
+     "display_name": "string",
+     "name": "string",
+     "header": "string(empty)",
+     "purpose": "string(empty)",
+     "last_post_at": "number",
+     "total_msg_count": "number",
+     "extra_update_at": "number",
+     "creator_id": "string(empty)",
+     "scheme_id": "null",
+     "props": "null",
+     "group_constrained": "null",
+     "shared": "null",
+     "total_msg_count_root": "number",
+     "policy_id": "null",
+     "last_root_post_at": "number",
+     "banner_info": "null",
+     "policy_enforced": "boolean",
+     "default_category_name": "string(empty)"
+    }
+   ],
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "CHAT",
+   "method": "GET",
+   "path": "/api/v4/users/me/teams/{id}/channels/members",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [],
+   "resp_shape": [
+    {
+     "channel_id": "string",
+     "user_id": "string",
+     "roles": "string",
+     "last_viewed_at": "number",
+     "msg_count": "number",
+     "mention_count": "number",
+     "mention_count_root": "number",
+     "urgent_mention_count": "number",
+     "msg_count_root": "number",
+     "notify_props": {
+      "channel_auto_follow_threads": "string",
+      "desktop": "string",
+      "email": "string",
+      "ignore_channel_mentions": "string",
+      "mark_unread": "string",
+      "push": "string"
+     },
+     "last_update_at": "number",
+     "scheme_guest": "boolean",
+     "scheme_user": "boolean",
+     "scheme_admin": "boolean",
+     "explicit_roles": "string(empty)"
+    }
+   ],
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "CHAT",
+   "method": "GET",
+   "path": "/api/v4/users/me/teams/{id}/drafts",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [],
+   "resp_shape": null,
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "CHAT",
+   "method": "GET",
+   "path": "/api/v4/users/{id}/channel_members",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "page",
+    "per_page"
+   ],
+   "resp_shape": null,
+   "req_shape": null,
+   "mime": [
+    "application/x-ndjson"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "CHAT",
+   "method": "GET",
+   "path": "/api/v4/users/{id}/channels/{id}/posts/unread",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "collapsedThreads",
+    "collapsedThreadsExtended",
+    "limit_after",
+    "limit_before",
+    "skipFetchThreads"
+   ],
+   "resp_shape": {
+    "order": [
+     "string"
+    ],
+    "posts": {
+     "<dynamic-key>": {
+      "id": "string",
+      "create_at": "number",
+      "update_at": "number",
+      "edit_at": "number",
+      "delete_at": "number",
+      "is_pinned": "boolean",
+      "user_id": "string",
+      "channel_id": "string",
+      "root_id": "string(empty)",
+      "original_id": "string(empty)",
+      "message": "string",
+      "type": "string|string(empty)",
+      "props": {
+       "username": "string(numeric)"
+      },
+      "hashtags": "string(empty)",
+      "file_ids": [
+       "empty"
+      ],
+      "pending_post_id": "string(empty)",
+      "reply_count": "number",
+      "last_reply_at": "number",
+      "participants": "null",
+      "metadata": {},
+      "has_reactions": "boolean",
+      "remote_id": "string(empty)"
+     }
+    },
+    "next_post_id": "string",
+    "prev_post_id": "string",
+    "has_next": "boolean",
+    "first_inaccessible_post_time": "number"
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "CHAT",
+   "method": "GET",
+   "path": "/api/v4/users/{id}/teams/{id}/channels/categories",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [],
+   "resp_shape": {
+    "categories": [
+     {
+      "id": "string",
+      "user_id": "string",
+      "team_id": "string",
+      "sort_order": "number",
+      "sorting": "string(empty)|string",
+      "type": "string",
+      "display_name": "string",
+      "muted": "boolean",
+      "collapsed": "boolean",
+      "channel_ids": [
+       "empty"
+      ]
+     }
+    ],
+    "order": [
+     "string"
+    ]
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "CHAT",
+   "method": "GET",
+   "path": "/api/v4/users/{id}/teams/{id}/threads",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "after",
+    "before",
+    "deleted",
+    "extended",
+    "per_page",
+    "since",
+    "threadsOnly",
+    "totalsOnly",
+    "unread"
+   ],
+   "resp_shape": {
+    "total": "number",
+    "total_unread_threads": "number",
+    "total_unread_mentions": "number",
+    "total_unread_urgent_mentions": "number",
+    "threads": "null"
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "CHAT",
+   "method": "GET",
+   "path": "/api/v4/{id}/fields",
+   "statuses": [
+    "200",
+    "401"
+   ],
+   "query_keys": [],
+   "resp_shape": {
+    "id": "string",
+    "message": "string",
+    "detailed_error": "string(empty)",
+    "request_id": "string",
+    "status_code": "number"
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "CHAT",
+   "method": "POST",
+   "path": "/api/v4/roles/names",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [],
+   "resp_shape": [
+    {
+     "id": "string",
+     "name": "string",
+     "display_name": "string",
+     "description": "string",
+     "create_at": "number",
+     "update_at": "number",
+     "delete_at": "number",
+     "permissions": [
+      "string"
+     ],
+     "scheme_managed": "boolean",
+     "built_in": "boolean"
+    }
+   ],
+   "req_shape": [
+    "string"
+   ],
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "CHAT",
+   "method": "POST",
+   "path": "/api/v4/users/login",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [],
+   "resp_shape": {
+    "id": "string",
+    "create_at": "number",
+    "update_at": "number",
+    "delete_at": "number",
+    "username": "string(numeric)",
+    "auth_service": "string(empty)",
+    "email": "string(email)",
+    "nickname": "string(empty)",
+    "first_name": "string",
+    "last_name": "string(empty)",
+    "position": "string(empty)",
+    "roles": "string",
+    "notify_props": {
+     "channel": "string",
+     "comments": "string",
+     "desktop": "string",
+     "desktop_sound": "string",
+     "desktop_threads": "string",
+     "email": "string",
+     "email_threads": "string",
+     "first_name": "string",
+     "mention_keys": "string(empty)",
+     "push": "string",
+     "push_status": "string",
+     "push_threads": "string"
+    },
+    "last_password_update": "number",
+    "locale": "string",
+    "timezone": {
+     "automaticTimezone": "string",
+     "manualTimezone": "string(empty)",
+     "useAutomaticTimezone": "string"
+    },
+    "remote_id": "string(empty)",
+    "disable_welcome_email": "boolean",
+    "erp_id": "number"
+   },
+   "req_shape": {
+    "token": "string(empty)",
+    "deviceId": "string(empty)",
+    "encrypted_erp_id": "string"
+   },
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "CHAT",
+   "method": "POST",
+   "path": "/api/v4/users/status/ids",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [],
+   "resp_shape": [
+    {
+     "user_id": "string",
+     "status": "string",
+     "manual": "boolean",
+     "last_activity_at": "number",
+     "dnd_end_time": "number"
+    }
+   ],
+   "req_shape": [
+    "string"
+   ],
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "CRM",
+   "method": "GET",
+   "path": "/lead-mgmt/pending-actions",
+   "statuses": [
+    "200",
+    "406"
+   ],
+   "query_keys": [],
+   "resp_shape": {
+    "message": "string",
+    "result": {
+     "cards": [
+      "empty"
+     ],
+     "show_gate": "boolean"
+    }
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 5,
+   "on_rendered_route": true
+  },
+  {
+   "service": "CRM",
+   "method": "GET",
+   "path": "/user-mgmt/branch-list",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [],
+   "resp_shape": {
+    "message": "string",
+    "result": [
+     {
+      "id": "number",
+      "branch_name": "string",
+      "is_delete": "boolean",
+      "zone__zone_name": "string",
+      "zone__city__city_name": "string"
+     }
+    ]
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "CRM",
+   "method": "GET",
+   "path": "/user-mgmt/{id}",
+   "statuses": [
+    "400"
+   ],
+   "query_keys": [],
+   "resp_shape": {
+    "success": "boolean",
+    "message": "string"
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 4,
+   "on_rendered_route": true
+  },
+  {
+   "service": "ERP",
+   "method": "GET",
+   "path": "/academic/lp-view",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "acad_session",
+    "central_grade",
+    "central_gsmap",
+    "central_subject",
+    "grade",
+    "section_mapping",
+    "session_year",
+    "subject"
+   ],
+   "resp_shape": {
+    "message": "string",
+    "result": [
+     {
+      "id": "number",
+      "period_name": "string",
+      "sequence": "number",
+      "chapter_id": "number",
+      "chapter__chapter_name": "string",
+      "key_concept_id": "number",
+      "key_concept__topic_name": "string",
+      "chapter__lt_module_id": "number",
+      "chapter__board": "number",
+      "chapter__volume_id": "number",
+      "is_completed": "boolean",
+      "completed_sections": "number",
+      "total_sections": "number",
+      "next_period": "boolean",
+      "homework_assigned": "boolean",
+      "hw_counts": "null",
+      "clicker_quiz": "null"
+     }
+    ],
+    "status_code": "number"
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "ERP",
+   "method": "GET",
+   "path": "/academic/pending-feedback-events",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [],
+   "resp_shape": {
+    "status_code": "number",
+    "message": "string",
+    "result": [
+     "empty"
+    ]
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": false
+  },
+  {
+   "service": "ERP",
+   "method": "GET",
+   "path": "/academic/student-language-form",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [],
+   "resp_shape": {
+    "status_code": "number",
+    "message": "string",
+    "result": "null"
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": false
+  },
+  {
+   "service": "ERP",
+   "method": "GET",
+   "path": "/academic/v1/ebook_ibook_count",
+   "statuses": [
+    "404"
+   ],
+   "query_keys": [
+    "acad_session_id",
+    "board",
+    "book_type",
+    "branch",
+    "domain_name",
+    "grade",
+    "lesson_plan",
+    "page_number",
+    "page_size",
+    "session_year",
+    "subject",
+    "volume"
+   ],
+   "resp_shape": null,
+   "req_shape": null,
+   "mime": [
+    "text/html"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "ERP",
+   "method": "GET",
+   "path": "/academic/{id}",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [],
+   "resp_shape": {
+    "status_code": "number",
+    "message": "string",
+    "result": [
+     {
+      "id": "number",
+      "subject_name": "string"
+     }
+    ]
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 2,
+   "on_rendered_route": true
+  },
+  {
+   "service": "ERP",
+   "method": "GET",
+   "path": "/acms/assessments/dashboard_home",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "branch_id",
+    "session_year"
+   ],
+   "resp_shape": {
+    "upcoming_exams": [
+     {
+      "assessment_id": "number",
+      "name": "string",
+      "test_type": "string",
+      "grade_name": "string",
+      "subject_name": "string",
+      "description": "string(empty)",
+      "test_date": "string(date)",
+      "days_from_today": "number"
+     }
+    ],
+    "upload_deadlines": [
+     {
+      "test_name": "string",
+      "test_date": "string(date)",
+      "deadline_date": "string(date)",
+      "is_overdue": "boolean",
+      "pending_count": "number",
+      "total_count": "number",
+      "subjects": [
+       {
+        "subject_id": "number",
+        "subject_name": "string",
+        "grade_name": "string"
+       }
+      ]
+     }
+    ],
+    "top_bottom_branches": {
+     "top": [
+      {
+       "branch_id": "number",
+       "branch_name": "string",
+       "zone_id": "number",
+       "zone_name": "string",
+       "upload_pct": "number",
+       "avg_marks_pct": "number",
+       "total_students": "number",
+       "marks_entered": "number"
+      }
+     ],
+     "bottom": [
+      {
+       "branch_id": "number",
+       "branch_name": "string",
+       "zone_id": "number",
+       "zone_name": "string",
+       "upload_pct": "number",
+       "avg_marks_pct": "number",
+       "total_students": "number",
+       "marks_entered": "number"
+      }
+     ],
+     "total_branch_count": "number",
+     "test_types": [
+      "string"
+     ],
+     "subjects": [
+      {
+       "subject_id": "number",
+       "subject_name": "string"
+      }
+     ],
+     "overall_avg": "number",
+     "zone_avg": "null",
+     "branches_above_avg": "number",
+     "branches_below_avg": "number",
+     "branches_above_70": "number",
+     "total_branches": "number",
+     "total_students": "number",
+     "students_above_70": "number"
+    },
+    "year_timeline": [
+     {
+      "date_from": "string(date)",
+      "date_to": "string(date)|null",
+      "title": "string",
+      "grades": [
+       "empty"
+      ],
+      "subjects": [
+       {
+        "subject_name": "string",
+        "grade_name": "string"
+       }
+      ],
+      "days_from_today": "number",
+      "is_past": "boolean",
+      "is_today": "boolean"
+     }
+    ],
+    "computed_at": "string(datetime)"
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "ERP",
+   "method": "GET",
+   "path": "/acms/assessments/{id}",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "branch_id",
+    "limit",
+    "offset",
+    "session_year"
+   ],
+   "resp_shape": {
+    "tests": [
+     {
+      "id": "number",
+      "name": "string",
+      "tab": "string",
+      "grade": "string",
+      "grade_id": "number",
+      "subject": "string",
+      "subject_id": "number",
+      "date": "string(date)",
+      "students": "number",
+      "avg": "number",
+      "band": [
+       "number"
+      ],
+      "qwise": "boolean",
+      "nat_avg": "number"
+     }
+    ],
+    "total": "number",
+    "offset": "number",
+    "limit": "number",
+    "facets": [
+     {
+      "grade_id": "number",
+      "grade": "string",
+      "subject_id": "number",
+      "subject": "string"
+     }
+    ],
+    "computed_at": "string(datetime)"
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "ERP",
+   "method": "GET",
+   "path": "/acms/branch-zones",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [],
+   "resp_shape": {
+    "branches": [
+     {
+      "branch_id": "number",
+      "branch_name": "string",
+      "zone_id": "number",
+      "zone_name": "string"
+     }
+    ],
+    "zones": [
+     {
+      "id": "number",
+      "name": "string"
+     }
+    ],
+    "zone_branch_map": {
+     "<dynamic-key>": "[\"number\"]"
+    },
+    "access": {
+     "level": "string",
+     "is_global": "boolean",
+     "branch_ids": [
+      "number"
+     ]
+    }
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "ERP",
+   "method": "GET",
+   "path": "/acms/curriculum/session-years",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [],
+   "resp_shape": [
+    {
+     "id": "number",
+     "session_year": "string"
+    }
+   ],
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "ERP",
+   "method": "GET",
+   "path": "/acms/curriculum/subjects",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [],
+   "resp_shape": [
+    {
+     "id": "number",
+     "subject_name": "string",
+     "mapping_id": "number"
+    }
+   ],
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "ERP",
+   "method": "GET",
+   "path": "/api/user-progress/admin/dashboard",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "branch_id",
+    "session_year_id"
+   ],
+   "resp_shape": {
+    "total_students": "number",
+    "students": [
+     {
+      "user_id": "number",
+      "name": "string",
+      "grade_name": "null",
+      "section_name": "null",
+      "current_unit_id": "string|null",
+      "current_unit_title": "string",
+      "current_sub_unit_id": "string|null",
+      "current_sub_unit_title": "string|null",
+      "current_sub_unit_type": "string|null",
+      "current_streak": "number",
+      "longest_streak": "number",
+      "units_completed": "number",
+      "total_units": "number",
+      "subunits_completed": "number",
+      "total_subunits": "number",
+      "last_active": "string(date)|null",
+      "days_inactive": "number|null",
+      "lessons_replayed": "number",
+      "units": [
+       {
+        "unit_id": "string",
+        "unit_title": "string",
+        "unit_order": "number",
+        "sub_units": [
+         {
+          "sub_unit_id": "string",
+          "title": "string",
+          "type": "string",
+          "order": "number",
+          "status": "string",
+          "stars": "number"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "ERP",
+   "method": "GET",
+   "path": "/assessment/{id}",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [],
+   "resp_shape": {
+    "status_code": "number",
+    "message": "string",
+    "result": [
+     {
+      "id": "number",
+      "central_category_id": "number",
+      "central_category_name": "string",
+      "erp_category_id": "number",
+      "is_delete": "boolean",
+      "is_draft": "boolean",
+      "is_review": "boolean",
+      "created_at": "string(datetime)",
+      "is_subject_dependent": "boolean",
+      "erp_category_name": "string"
+     }
+    ]
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 2,
+   "on_rendered_route": true
+  },
+  {
+   "service": "ERP",
+   "method": "GET",
+   "path": "/board-prep/my-inbox",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [],
+   "resp_shape": {
+    "threads": [
+     "empty"
+    ],
+    "count": "number"
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "ERP",
+   "method": "GET",
+   "path": "/erp_user/branch",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "session_year"
+   ],
+   "resp_shape": {
+    "status_code": "number",
+    "status": "string",
+    "message": "string",
+    "data": {
+     "next": "null",
+     "previous": "null",
+     "count": "number",
+     "limit": "number",
+     "current_page": "number",
+     "total_pages": "number",
+     "result": [
+      "empty"
+     ]
+    }
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "ERP",
+   "method": "GET",
+   "path": "/erp_user/brand/config",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "code"
+   ],
+   "resp_shape": {
+    "status_code": "number",
+    "message": "string",
+    "result": {
+     "code": "string",
+     "name": "string",
+     "short_name": "string",
+     "logo": "null",
+     "branding_photo": "null",
+     "url": "string(url)",
+     "primary_color": "string",
+     "erp_id_suffix": "string",
+     "terms_conditions": "null",
+     "privacy_policy": "null"
+    }
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 4,
+   "on_rendered_route": false
+  },
+  {
+   "service": "ERP",
+   "method": "GET",
+   "path": "/erp_user/user-information",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "branch",
+    "erp_id",
+    "session_year"
+   ],
+   "resp_shape": {
+    "status_code": "number",
+    "message": "string",
+    "result": {
+     "next": "null",
+     "previous": "null",
+     "count": "number",
+     "limit": "number",
+     "current_page": "number",
+     "total_pages": "number",
+     "results": [
+      {
+       "id": "number",
+       "erp_id": "string",
+       "contact": "string",
+       "user_id": "number",
+       "gender": "string",
+       "is_active": "boolean",
+       "email": "string(email)",
+       "father_name": "string",
+       "mother_name": "string",
+       "guardian_name": "null",
+       "mapping_bgs": {
+        "section": {
+         "id": "number",
+         "grade_name": "string"
+        },
+        "grade": {
+         "id": "number",
+         "sec_map_id": "number",
+         "grade_name": "string"
+        },
+        "branch": {
+         "id": "number",
+         "branch_name": "string",
+         "legal_name": {
+          "legalName": "string",
+          "legalEmail": "string(email)",
+          "legalContact": "string(numeric)"
+         },
+         "pin_code": "number"
+        },
+        "virtual_branch": {}
+       },
+       "status": "string(numeric)",
+       "date_of_birth": "string(date)",
+       "name": "string",
+       "address": "string",
+       "is_blocked": "boolean",
+       "branch_city": "string",
+       "branch_address": "string",
+       "profile": "string(url)",
+       "mother_photo": "string",
+       "guardian_photo": "string(empty)",
+       "father_photo": "string",
+       "father_contact": "string",
+       "mother_contact": "string",
+       "guardian_contact": "string"
+      }
+     ]
+    }
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 2,
+   "on_rendered_route": true
+  },
+  {
+   "service": "ERP",
+   "method": "GET",
+   "path": "/erp_user/user-mgmt/student-information",
+   "statuses": [
+    "200",
+    "404"
+   ],
+   "query_keys": [
+    "branch",
+    "erp_id",
+    "session_year"
+   ],
+   "resp_shape": {
+    "status_code": "number",
+    "message": "string",
+    "result": {
+     "next": "null",
+     "previous": "null",
+     "count": "number",
+     "limit": "number",
+     "current_page": "number",
+     "total_pages": "number",
+     "results": [
+      {
+       "id": "number",
+       "erp_id": "string",
+       "contact": "string",
+       "user_id": "number",
+       "gender": "string",
+       "is_active": "boolean",
+       "email": "string(email)",
+       "father_name": "string",
+       "mother_name": "string",
+       "guardian_name": "null",
+       "mapping_bgs": {
+        "section": {
+         "id": "number",
+         "grade_name": "string"
+        },
+        "grade": {
+         "id": "number",
+         "sec_map_id": "number",
+         "grade_name": "string"
+        },
+        "branch": {
+         "id": "number",
+         "branch_name": "string",
+         "legal_name": {
+          "legalName": "string",
+          "legalEmail": "string(email)",
+          "legalContact": "string(numeric)"
+         },
+         "pin_code": "number"
+        },
+        "virtual_branch": {}
+       },
+       "status": "string(numeric)",
+       "date_of_birth": "string(date)",
+       "name": "string",
+       "address": "string",
+       "is_blocked": "boolean",
+       "branch_city": "string",
+       "branch_address": "string",
+       "profile": "string(url)",
+       "mother_photo": "string",
+       "guardian_photo": "string(empty)",
+       "father_photo": "string",
+       "father_contact": "string",
+       "mother_contact": "string",
+       "guardian_contact": "null",
+       "single_parent": "null",
+       "is_user_card": "boolean"
+      }
+     ]
+    }
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 2,
+   "on_rendered_route": true
+  },
+  {
+   "service": "ERP",
+   "method": "GET",
+   "path": "/erp_user/user-mgmt/student-subjects",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "section_mapping",
+    "session_year"
+   ],
+   "resp_shape": {
+    "status_code": "number",
+    "message": "string",
+    "result": [
+     {
+      "id": "number",
+      "subject_id": "number",
+      "subject__subject_name": "string"
+     }
+    ]
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "ERP",
+   "method": "GET",
+   "path": "/erp_user/{id}",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "erp_id"
+   ],
+   "resp_shape": {
+    "status": "number",
+    "result": {
+     "student_info": {
+      "name": "string",
+      "erp_id": "string",
+      "grade": "string",
+      "section": "string",
+      "branch": "string"
+     },
+     "att_ptnge": "number",
+     "present_percentage": "number",
+     "absent_percentage": "number",
+     "unmarked_ptnge": "number",
+     "holidays_percentage": "number",
+     "today_attendance": "string",
+     "montly_attendance": [
+      {
+       "month": "number",
+       "year": "number",
+       "attendance_details": {
+        "present_percentage": "number",
+        "present": "number",
+        "absent": "number",
+        "unmarked": "number",
+        "holidays": "number"
+       }
+      }
+     ]
+    }
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": false
+  },
+  {
+   "service": "ERP",
+   "method": "GET",
+   "path": "/event-feedback/my/next-nudge",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [],
+   "resp_shape": {
+    "status_code": "number",
+    "message": "string",
+    "result": "null"
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 5,
+   "on_rendered_route": true
+  },
+  {
+   "service": "ERP",
+   "method": "GET",
+   "path": "/feature-request/categories",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "active_only"
+   ],
+   "resp_shape": {
+    "status": "string",
+    "message": "string",
+    "data": [
+     {
+      "id": "number",
+      "name": "string",
+      "description": "string(empty)|string|null",
+      "icon": "null",
+      "color": "string",
+      "is_active": "boolean",
+      "order": "number",
+      "request_count": "number",
+      "created_at": "string(datetime)",
+      "updated_at": "string(datetime)"
+     }
+    ]
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "ERP",
+   "method": "GET",
+   "path": "/feature-request/requests",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "my_requests",
+    "page",
+    "page_size",
+    "sort"
+   ],
+   "resp_shape": {
+    "status": "string",
+    "message": "string",
+    "data": {
+     "count": "number",
+     "next": "null",
+     "previous": "null",
+     "page": "number",
+     "page_size": "number",
+     "total_pages": "number",
+     "results": [
+      "empty"
+     ],
+     "status_counts": {}
+    }
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "ERP",
+   "method": "GET",
+   "path": "/feature-request/requests/assignees",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [],
+   "resp_shape": {
+    "status": "string",
+    "message": "string",
+    "data": [
+     {
+      "id": "number",
+      "username": "string",
+      "name": "string",
+      "email": "string(email)",
+      "erp_id": "string"
+     }
+    ]
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "ERP",
+   "method": "GET",
+   "path": "/feature-request/requests/creators",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [],
+   "resp_shape": {
+    "status": "string",
+    "message": "string",
+    "data": [
+     {
+      "id": "number",
+      "username": "string",
+      "name": "string",
+      "email": "string(email)",
+      "erp_id": "string"
+     }
+    ]
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "ERP",
+   "method": "GET",
+   "path": "/ptm-feedback/branches",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [],
+   "resp_shape": {
+    "result": [
+     {
+      "id": "number",
+      "branch_name": "string"
+     }
+    ]
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "ERP",
+   "method": "GET",
+   "path": "/timetable/student-timetable",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "acad_session",
+    "student_id"
+   ],
+   "resp_shape": {
+    "status_code": "number",
+    "message": "string",
+    "result": {
+     "period_system": [
+      {
+       "id": "number",
+       "period_name": "string",
+       "position": "number",
+       "start_time": "string(time)",
+       "end_time": "string(time)",
+       "is_break": "boolean"
+      }
+     ],
+     "week_days": {
+      "<dynamic-key>": "string"
+     },
+     "week_holidays": {
+      "<dynamic-key>": "null"
+     },
+     "teacher_periods": [
+      "empty"
+     ],
+     "is_sen_student": "boolean"
+    }
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "ERP",
+   "method": "GET",
+   "path": "/timetable/student-tt-dash",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "acad_session",
+    "date"
+   ],
+   "resp_shape": {
+    "status_code": "number",
+    "message": "string",
+    "result": {
+     "is_sen_student": "boolean",
+     "periods": [
+      "empty"
+     ]
+    }
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": false
+  },
+  {
+   "service": "ERP",
+   "method": "GET",
+   "path": "/timetable/unfilled-section-slots",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "section_mapping"
+   ],
+   "resp_shape": {
+    "status_code": "number",
+    "message": "string",
+    "result": [
+     "empty"
+    ]
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "FIN",
+   "method": "GET",
+   "path": "/api/v2/transport/get-inquiry-count",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "branch_id"
+   ],
+   "resp_shape": {
+    "confirm_stop_point": "number",
+    "fee_paid": "number",
+    "fee_slab_assigned": "number",
+    "inquiry_received": "number",
+    "inquiry_sent": "number",
+    "optout": "number",
+    "route_assigned": "number",
+    "pending": "number"
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "FIN",
+   "method": "GET",
+   "path": "/api/v2/transport/transport-stop-point",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "branch_id",
+    "count_only",
+    "is_active",
+    "page",
+    "page_size",
+    "paired_branches",
+    "route_assigned"
+   ],
+   "resp_shape": {
+    "next": "string(url)",
+    "previous": "null",
+    "count": "number",
+    "limit": "number",
+    "current_page": "number",
+    "total_pages": "number",
+    "results": [
+     {
+      "id": "number",
+      "route_object": [
+       {
+        "trip_id": "null",
+        "route_id": "string",
+        "trip_name": "string",
+        "shift": "string",
+        "timing": "null",
+        "source": "string"
+       }
+      ],
+      "student_details": {
+       "grade": "string",
+       "grade_id": "number",
+       "name": "string",
+       "contact": "string",
+       "section": "string"
+      },
+      "stop_point_type": "string",
+      "erp_id": "string",
+      "name": "string",
+      "branch_id": "string(numeric)",
+      "latitude": "string(numeric)",
+      "longitude": "string(numeric)",
+      "tags": [
+       "string"
+      ],
+      "address": "string",
+      "shift": "null",
+      "created_at": "string(datetime)",
+      "created_by": "null|string(empty)|string",
+      "is_deleted": "boolean",
+      "is_active": "boolean",
+      "polygon_id": "string(numeric)|null",
+      "grade_id": "number|null",
+      "is_after_noon_shift": "boolean",
+      "narrow_road_access": "boolean",
+      "edunav_stop_id": "string",
+      "edunav_synced_at": "string(datetime)"
+     }
+    ]
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 2,
+   "on_rendered_route": true
+  },
+  {
+   "service": "FIN",
+   "method": "GET",
+   "path": "/apiV1/branch-details/v2",
+   "statuses": [
+    "404"
+   ],
+   "query_keys": [
+    "branch_id"
+   ],
+   "resp_shape": null,
+   "req_shape": null,
+   "mime": [
+    "text/html"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "FIN",
+   "method": "GET",
+   "path": "/apiV1/branch-zone",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [],
+   "resp_shape": {
+    "zones": [
+     {
+      "id": "number",
+      "zone_name": "string"
+     }
+    ]
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "FIN",
+   "method": "GET",
+   "path": "/apiV1/finance-partner",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [],
+   "resp_shape": [
+    {
+     "id": "number",
+     "partner_name": "string",
+     "is_active": "boolean",
+     "created_at": "string(datetime)",
+     "modified_at": "string(datetime)"
+    }
+   ],
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "FIN",
+   "method": "GET",
+   "path": "/apiV1/gst-list",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "academic_session_id",
+    "branch_id"
+   ],
+   "resp_shape": [
+    "empty"
+   ],
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "FIN",
+   "method": "GET",
+   "path": "/apiV1/imprest-transactions",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "branch_id",
+    "erp_id",
+    "finance_session_year"
+   ],
+   "resp_shape": {
+    "next": "null",
+    "previous": "null",
+    "count": "number",
+    "limit": "number",
+    "current_page": "number",
+    "total_pages": "number",
+    "results": {
+     "minimum_recharge": "number",
+     "amount": "number",
+     "is_refund_requested": "boolean",
+     "refund_status": "string",
+     "data": [
+      {
+       "<dynamic-key>": "number|string|string(numeric)|string(datetime)|boolean|null"
+      }
+     ]
+    }
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": false
+  },
+  {
+   "service": "FIN",
+   "method": "GET",
+   "path": "/apiV1/language-list",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [],
+   "resp_shape": [
+    {
+     "id": "number",
+     "language_type": "string",
+     "branch_id": "string(numeric)"
+    }
+   ],
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "FIN",
+   "method": "GET",
+   "path": "/apiV1/payment-method-list",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [],
+   "resp_shape": [
+    {
+     "id": "number",
+     "payment_method": "string",
+     "status": "boolean"
+    }
+   ],
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": false
+  },
+  {
+   "service": "FIN",
+   "method": "GET",
+   "path": "/apiV1/receipt-config-list",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "branch_id"
+   ],
+   "resp_shape": [
+    {
+     "id": "number",
+     "branch_id": "string(numeric)",
+     "prefix": "string",
+     "receipt_header": "string",
+     "receipt_sub_header": "string",
+     "receipt_footer": "string",
+     "receipt_sub_footer": "string",
+     "payslip_header": "string",
+     "principal_signature": "null",
+     "is_active": "boolean",
+     "is_signature_enabled": "boolean",
+     "is_logo_enabled": "boolean"
+    }
+   ],
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "FIN",
+   "method": "GET",
+   "path": "/apiV1/receipt-range-list",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "branch_id",
+    "finance_session_year"
+   ],
+   "resp_shape": [
+    "empty"
+   ],
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "FIN",
+   "method": "GET",
+   "path": "/apiV1/ticket",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "parent_login",
+    "raised_by"
+   ],
+   "resp_shape": [
+    "empty"
+   ],
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 5,
+   "on_rendered_route": true
+  },
+  {
+   "service": "FIN",
+   "method": "GET",
+   "path": "/apiV1/v2/manager-pending-summary",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [],
+   "resp_shape": {
+    "status_code": "number",
+    "message": "string",
+    "result": {
+     "total_pending": "number",
+     "pending_over_7_days": "number",
+     "pending_over_20_days": "number"
+    }
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": false
+  },
+  {
+   "service": "FIN",
+   "method": "GET",
+   "path": "/apiV1/{id}",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "branch_id",
+    "erp_id",
+    "finance_session_year"
+   ],
+   "resp_shape": {
+    "is_delegate": "boolean",
+    "delegators": [
+     "empty"
+    ]
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 400,
+   "on_rendered_route": true
+  },
+  {
+   "service": "MGMT",
+   "method": "GET",
+   "path": "/lesson_plan/chapter-dropdown",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "module"
+   ],
+   "resp_shape": {
+    "status_code": "number",
+    "message": "string",
+    "result": [
+     {
+      "id": "number",
+      "chapter_name": "string",
+      "lt_module_id": "number"
+     }
+    ]
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "MGMT",
+   "method": "GET",
+   "path": "/lesson_plan/lp-ycp-pd",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "board",
+    "central_gsmap",
+    "chapter",
+    "version",
+    "volume"
+   ],
+   "resp_shape": {
+    "status_code": "number",
+    "message": "string",
+    "result": [
+     {
+      "id": "number",
+      "lesson_type": "string(numeric)",
+      "media_file": [
+       "string"
+      ],
+      "is_delete": "boolean"
+     }
+    ]
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "MGMT",
+   "method": "GET",
+   "path": "/lesson_plan/module-dropdown",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "board",
+    "gs_map",
+    "version",
+    "volume"
+   ],
+   "resp_shape": {
+    "status_code": "number",
+    "message": "string",
+    "result": [
+     {
+      "id": "number",
+      "lt_module_name": "string"
+     }
+    ]
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "MGMT",
+   "method": "GET",
+   "path": "/lesson_plan/topic-dropdown",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "chapter"
+   ],
+   "resp_shape": {
+    "status_code": "number",
+    "message": "string",
+    "result": [
+     {
+      "id": "number",
+      "topic_name": "string",
+      "chptr_fk_id": "number"
+     }
+    ]
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "MGMT",
+   "method": "GET",
+   "path": "/lesson_plan/volume-dropdown",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "gs_map",
+    "version"
+   ],
+   "resp_shape": {
+    "status_code": "number",
+    "message": "string",
+    "result": [
+     {
+      "id": "number",
+      "volume_name": "string"
+     }
+    ]
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  },
+  {
+   "service": "REPORTS",
+   "method": "GET",
+   "path": "/api/reports/diary_homework_count",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "session_id"
+   ],
+   "resp_shape": {
+    "status_code": "number",
+    "message": "string",
+    "result": {
+     "diary_count": "number",
+     "homework_count": {
+      "homeworks": "number"
+     },
+     "chapter_count": "number"
+    }
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": false
+  },
+  {
+   "service": "REPORTS",
+   "method": "GET",
+   "path": "/api/reports/upcoming_exam",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "session_year"
+   ],
+   "resp_shape": {
+    "status_code": "number",
+    "message": "string",
+    "result": [
+     "empty"
+    ]
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": false
+  },
+  {
+   "service": "REPORTS",
+   "method": "GET",
+   "path": "/api/reports/v1/events",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "end_date",
+    "session_year",
+    "start_date"
+   ],
+   "resp_shape": {
+    "status_code": "number",
+    "message": "string",
+    "events_data": [
+     "empty"
+    ]
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": false
+  },
+  {
+   "service": "REPORTS",
+   "method": "GET",
+   "path": "/api/reports/v1/holiday",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "end_date",
+    "session_year",
+    "start_date"
+   ],
+   "resp_shape": {
+    "status_code": "number",
+    "message": "string",
+    "is_enabled": "boolean",
+    "holiday_detail": [
+     "empty"
+    ]
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": false
+  },
+  {
+   "service": "REPORTS",
+   "method": "GET",
+   "path": "/api/reports/v2/{id}/view",
+   "statuses": [
+    "200"
+   ],
+   "query_keys": [
+    "acad_session_id",
+    "month",
+    "subject_id"
+   ],
+   "resp_shape": {
+    "status_code": "number",
+    "developer_msg": "string",
+    "message": "string",
+    "data": {}
+   },
+   "req_shape": null,
+   "mime": [
+    "application/json"
+   ],
+   "n_screens": 1,
+   "on_rendered_route": true
+  }
+ ]
+}

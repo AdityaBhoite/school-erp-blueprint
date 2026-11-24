@@ -1,0 +1,398 @@
+%% =====================================================================================
+%% Core ER diagram v2: replacement school ERP, Phase 0-2 scope
+%% Created 2026-11-23 by the documentation audit (AUDIT_REPORT.md section D).
+%% Additive: er_diagram.mmd is unchanged. Where the two differ for these entities, v2 wins.
+%%
+%% Conventions (PROPOSED, from ARCHITECTURE_BLUEPRINT.md section 5):
+%%   - Primary keys: uuid (UUIDv7) named id, unless a composite PK is shown.
+%%   - Every tenant-owned table has tenant_id uuid NOT NULL with a forced RLS policy.
+%%     tenant_id is shown on each entity. Its FK edges to TENANT are omitted to keep
+%%     the diagram readable.
+%%   - Standard columns NOT shown: created_at, updated_at, created_by, updated_by,
+%%     deleted_at (soft delete), version (optimistic locking on editable aggregates).
+%%   - FK delete behaviour: ON DELETE RESTRICT everywhere; removal is a soft delete.
+%%   - branch_id / academic_year_id copied onto child tables are DENORMALISED scope
+%%     columns, kept consistent by composite FKs or triggers. They exist so that scope
+%%     checks and indexes do not need joins.
+%%
+%% Provenance tags in comments:
+%%   OBS   = concept or field seen in the original's runtime API shapes (E016)
+%%   STAT  = implied by static routes or endpoint names
+%%   INF   = inferred
+%%   PROP  = proposed for the replacement, no evidence in the original
+%%   ASSUMPTION = a modelling decision that needs owner confirmation
+%% =====================================================================================
+erDiagram
+
+  %% ---------- Tenancy and organisation ----------
+  TENANT {
+    uuid id PK
+    string code UK "OBS brand code"
+    string name "OBS"
+    string time_zone "PROP"
+    string currency "PROP"
+    string primary_color "STAT brand primary_color; original value must NOT be reused"
+  }
+  ZONE {
+    uuid id PK
+    uuid tenant_id FK
+    string name "OBS zone_name"
+  }
+  CITY {
+    uuid id PK
+    uuid tenant_id FK
+    string name "OBS city_name"
+  }
+  BRANCH {
+    uuid id PK
+    uuid tenant_id FK
+    uuid zone_id FK "nullable. ASSUMPTION: independent of city (OBS branch has separate zone and city refs)"
+    uuid city_id FK "nullable"
+    string branch_code "OBS numeric string; UK with tenant_id"
+    string name "OBS"
+    string branch_type "OBS field; values UNKNOWN; tenant-defined enum PROP"
+  }
+  ACADEMIC_YEAR {
+    uuid id PK
+    uuid tenant_id FK
+    string name "OBS e.g. 2026-27"
+    date start_date "PROP"
+    date end_date "PROP; no overlap per tenant (ORG-01)"
+    bool is_current "OBS; partial unique index, one true per tenant"
+  }
+  BRANCH_ACADEMIC_YEAR {
+    uuid id PK
+    uuid tenant_id FK
+    uuid branch_id FK
+    uuid academic_year_id FK "UK with branch_id. OBS acad_session"
+    string status "PROP planning/active/closed"
+    string week_holidays "OBS week_holidays; weekday numbers 0-6"
+  }
+
+  %% ---------- Academic structure ----------
+  GRADE {
+    uuid id PK
+    uuid tenant_id FK
+    string name "OBS grade_name"
+    int sort_order "PROP"
+    string global_code "OBS eduvate_grade_id concept; nullable"
+  }
+  GRADE_OFFERING {
+    uuid id PK
+    uuid tenant_id FK
+    uuid branch_academic_year_id FK "UK with grade_id. STAT grademapping"
+    uuid grade_id FK
+    uuid branch_id FK "denormalised"
+    uuid academic_year_id FK "denormalised"
+  }
+  SECTION {
+    uuid id PK
+    uuid tenant_id FK
+    string name "OBS section_name e.g. A"
+  }
+  CLASS_SECTION {
+    uuid id PK
+    uuid tenant_id FK
+    uuid grade_offering_id FK "UK with section_id. OBS section_mapping"
+    uuid section_id FK
+    uuid branch_id FK "denormalised"
+    uuid academic_year_id FK "denormalised"
+    uuid period_system_id FK "nullable. STAT period-system-section-options"
+    int capacity "PROP"
+  }
+  SUBJECT {
+    uuid id PK
+    uuid tenant_id FK
+    string name "OBS subject_name"
+    string code "PROP; UK with tenant_id"
+    string kind "OBS co-scholastic list exists; scholastic or co_scholastic"
+  }
+  CLASS_SUBJECT {
+    uuid id PK
+    uuid tenant_id FK
+    uuid class_section_id FK "UK with subject_id. OBS mapping_subject"
+    uuid subject_id FK
+    int weekly_periods "PROP"
+  }
+
+  %% ---------- Identity and access ----------
+  USER {
+    uuid id PK
+    uuid tenant_id FK
+    string login_id "UK with tenant_id. OBS erp_id concept; generated, original format NOT reused"
+    string email "nullable"
+    string phone "nullable"
+    string user_type "INF staff/student/guardian"
+    string password_hash "PROP Argon2id"
+    bool must_change_password "OBS force_update concept"
+    bool mfa_enabled "OBS is_2fa_enabled concept"
+    bool is_active
+  }
+  SESSION {
+    uuid id PK
+    uuid tenant_id FK
+    uuid user_id FK
+    uuid family_id "PROP refresh rotation family"
+    string refresh_token_hash "PROP"
+    timestamptz expires_at
+    timestamptz revoked_at "nullable"
+  }
+  ROLE {
+    uuid id PK
+    uuid tenant_id FK "system roles seeded per tenant"
+    string code "UK with tenant_id"
+    string name
+    bool is_system "PROP"
+  }
+  PERMISSION {
+    string code PK "PROP module.resource.action; global catalogue in code, NOT tenant-scoped"
+    string description
+  }
+  ROLE_PERMISSION {
+    uuid role_id PK, FK
+    string permission_code PK, FK
+    uuid tenant_id FK
+  }
+  ROLE_ASSIGNMENT {
+    uuid id PK
+    uuid tenant_id FK
+    uuid user_id FK
+    uuid role_id FK
+    string scope_type "PROP tenant/branch/grade_offering/class_section/class_subject"
+    uuid scope_id "nullable when scope_type is tenant; polymorphic, validated in service"
+    uuid academic_year_id FK "nullable means all years"
+    timestamptz valid_from
+    timestamptz valid_to "nullable"
+  }
+  USER_GRANT {
+    uuid id PK
+    uuid tenant_id FK
+    uuid user_id FK
+    string permission_code FK
+    string scope_type
+    uuid scope_id
+    string reason "mandatory"
+    uuid granted_by FK
+    timestamptz expires_at "mandatory. PROP replaces hard-coded erpIds allow-lists"
+  }
+  AUDIT_LOG {
+    uuid id PK
+    uuid tenant_id FK
+    uuid actor_user_id FK
+    uuid impersonator_user_id FK "nullable"
+    string action
+    string entity_type
+    uuid entity_id
+    jsonb before_masked
+    jsonb after_masked
+    string request_id
+    timestamptz occurred_at "append-only; INSERT/SELECT grants only"
+  }
+
+  %% ---------- People ----------
+  STAFF {
+    uuid id PK
+    uuid tenant_id FK
+    uuid user_id FK "UK"
+    string employee_code "OBS company code concept"
+    string designation "OBS"
+    string department "OBS"
+    uuid primary_branch_id FK
+    string teacher_type "OBS teacher_type; values UNKNOWN"
+  }
+  TEACHING_ASSIGNMENT {
+    uuid id PK
+    uuid tenant_id FK
+    uuid staff_id FK
+    uuid class_section_id FK
+    uuid class_subject_id FK "nullable when role is class_teacher"
+    uuid academic_year_id FK "denormalised"
+    string role "ASSUMPTION subject_teacher/class_teacher; single source of teacher data scope"
+  }
+  STUDENT {
+    uuid id PK
+    uuid tenant_id FK
+    uuid user_id FK "nullable; student login policy Q13"
+    string admission_no "STAT; UK with tenant_id"
+    string first_name
+    string last_name
+    date dob
+    string status "STAT temporary/permanent status concept; PROP active/blocked/left/alumni"
+  }
+  GUARDIAN {
+    uuid id PK
+    uuid tenant_id FK
+    uuid user_id FK "nullable until invited; account model Q12"
+    string name
+    string phone "dedupe key PPL-03; masked by default"
+    string email "masked by default"
+  }
+  STUDENT_GUARDIAN {
+    uuid student_id PK, FK
+    uuid guardian_id PK, FK
+    uuid tenant_id FK
+    string relation
+    bool is_primary
+  }
+  STUDENT_ENROLMENT {
+    uuid id PK
+    uuid tenant_id FK
+    uuid student_id FK "partial unique: one active per student and academic_year (ENR-01)"
+    uuid class_section_id FK
+    uuid academic_year_id FK "MUST equal class_section.academic_year_id (composite FK)"
+    uuid branch_id FK "denormalised"
+    string roll_no "nullable. ASSUMPTION unique per class_section"
+    string status "PROP active/promoted/left"
+    date enrolled_on
+    date ended_on "nullable"
+  }
+
+  %% ---------- Scheduling ----------
+  PERIOD_SYSTEM {
+    uuid id PK
+    uuid tenant_id FK
+    uuid branch_academic_year_id FK
+    string name
+  }
+  PERIOD {
+    uuid id PK
+    uuid tenant_id FK
+    uuid period_system_id FK "UK with position"
+    string name "OBS period_name e.g. P1"
+    int position "OBS"
+    time start_time "OBS; no overlap within system (TT-01)"
+    time end_time "OBS"
+    bool is_break "OBS"
+  }
+  TIMETABLE_VERSION {
+    uuid id PK
+    uuid tenant_id FK
+    uuid branch_academic_year_id FK
+    string status "OBS is_draft concept; PROP draft/published/archived"
+    timestamptz published_at "nullable"
+  }
+  TIMETABLE_SLOT {
+    uuid id PK
+    uuid tenant_id FK
+    uuid timetable_version_id FK
+    uuid period_id FK
+    smallint day "OBS 0-6"
+    uuid class_section_id FK
+    uuid class_subject_id FK "nullable for non-subject periods"
+    uuid staff_id FK "must match a TEACHING_ASSIGNMENT for the class_subject"
+    uuid common_group_id "nullable. OBS common_group_id: one slot shared across sections"
+    uuid split_group_id "nullable. PROP split period: several slots share period, day and class_section (ASSUMPTION, G-36)"
+    uuid sen_student_id FK "nullable. OBS is_sen with student_id"
+  }
+  STAFF_ABSENCE {
+    uuid id PK
+    uuid tenant_id FK
+    uuid staff_id FK
+    date absence_date
+    string reason
+    string source "PROP manual/leave; minimal entity needed for substitution"
+  }
+  SUBSTITUTION {
+    uuid id PK
+    uuid tenant_id FK
+    uuid timetable_slot_id FK "UK with substitution_date"
+    date substitution_date
+    uuid substitute_staff_id FK "OBS substitute_teacher_id concept"
+    uuid substitute_class_subject_id FK "nullable. OBS sub_mapping_subject_id concept"
+    uuid staff_absence_id FK "nullable"
+  }
+  CALENDAR_EVENT {
+    uuid id PK
+    uuid tenant_id FK
+    uuid academic_year_id FK "OBS session_year"
+    string event_type "OBS concept; PROP enum holiday/assessment/event/competition/ptm/custom"
+    string title
+    date start_date "OBS event_date"
+    date end_date "nullable"
+    bool is_published "OBS"
+    uuid recurrence_parent_id FK "nullable. OBS is_recurring_parent concept"
+  }
+  CALENDAR_EVENT_SCOPE {
+    uuid id PK
+    uuid tenant_id FK
+    uuid calendar_event_id FK
+    string scope_type "OBS cities/branches/grades/subjects arrays"
+    uuid scope_id
+    bool is_exclusion "OBS branch_exclusions"
+  }
+  STUDENT_ATTENDANCE {
+    uuid id PK
+    uuid tenant_id FK
+    uuid student_enrolment_id FK "UK with attendance_date, period_id NULLS NOT DISTINCT"
+    uuid class_section_id FK "denormalised"
+    date attendance_date
+    uuid period_id FK "nullable; daily vs period-wise is Q01"
+    string status "values UNKNOWN in original; PROP configurable list"
+    uuid marked_by FK
+    timestamptz marked_at
+  }
+
+  %% ---------- Relationships: tenancy and organisation ----------
+  TENANT ||--o{ BRANCH : owns
+  TENANT ||--o{ ZONE : "defines (optional grouping)"
+  TENANT ||--o{ CITY : "defines (optional grouping)"
+  ZONE |o--o{ BRANCH : "groups (ASSUMPTION: no zone-city FK)"
+  CITY |o--o{ BRANCH : locates
+  TENANT ||--o{ ACADEMIC_YEAR : defines
+  BRANCH ||--o{ BRANCH_ACADEMIC_YEAR : "runs in"
+  ACADEMIC_YEAR ||--o{ BRANCH_ACADEMIC_YEAR : scopes
+
+  %% ---------- Academic structure ----------
+  BRANCH_ACADEMIC_YEAR ||--o{ GRADE_OFFERING : offers
+  GRADE ||--o{ GRADE_OFFERING : "offered as"
+  GRADE_OFFERING ||--o{ CLASS_SECTION : "split into"
+  SECTION ||--o{ CLASS_SECTION : names
+  CLASS_SECTION ||--o{ CLASS_SUBJECT : teaches
+  SUBJECT ||--o{ CLASS_SUBJECT : "taught as"
+
+  %% ---------- Identity and access ----------
+  USER ||--o{ SESSION : has
+  USER ||--o{ ROLE_ASSIGNMENT : holds
+  ROLE ||--o{ ROLE_ASSIGNMENT : "assigned via"
+  ACADEMIC_YEAR |o--o{ ROLE_ASSIGNMENT : "limits (optional)"
+  ROLE ||--o{ ROLE_PERMISSION : grants
+  PERMISSION ||--o{ ROLE_PERMISSION : "granted by"
+  USER ||--o{ USER_GRANT : "receives (time-bound)"
+  PERMISSION ||--o{ USER_GRANT : "granted individually"
+  USER ||--o{ AUDIT_LOG : "acts in"
+
+  %% ---------- People ----------
+  USER ||--o| STAFF : "is staff"
+  USER |o--o| STUDENT : "is student (optional login)"
+  USER |o--o| GUARDIAN : "is guardian"
+  STAFF ||--o{ TEACHING_ASSIGNMENT : "assigned to"
+  CLASS_SECTION ||--o{ TEACHING_ASSIGNMENT : "staffed by"
+  CLASS_SUBJECT |o--o{ TEACHING_ASSIGNMENT : "taught by"
+  STUDENT ||--o{ STUDENT_GUARDIAN : has
+  GUARDIAN ||--o{ STUDENT_GUARDIAN : "cares for"
+  STUDENT ||--o{ STUDENT_ENROLMENT : "enrolled per year"
+  CLASS_SECTION ||--o{ STUDENT_ENROLMENT : contains
+  ACADEMIC_YEAR ||--o{ STUDENT_ENROLMENT : "for year (must match class section)"
+
+  %% ---------- Scheduling ----------
+  BRANCH_ACADEMIC_YEAR ||--o{ PERIOD_SYSTEM : uses
+  PERIOD_SYSTEM ||--o{ PERIOD : "ordered periods"
+  PERIOD_SYSTEM |o--o{ CLASS_SECTION : "assigned to"
+  BRANCH_ACADEMIC_YEAR ||--o{ TIMETABLE_VERSION : versions
+  TIMETABLE_VERSION ||--o{ TIMETABLE_SLOT : contains
+  PERIOD ||--o{ TIMETABLE_SLOT : "slot in"
+  CLASS_SECTION ||--o{ TIMETABLE_SLOT : "scheduled for"
+  CLASS_SUBJECT |o--o{ TIMETABLE_SLOT : "subject of"
+  STAFF ||--o{ TIMETABLE_SLOT : teaches
+  STUDENT |o--o{ TIMETABLE_SLOT : "SEN 1-to-1 (optional)"
+  STAFF ||--o{ STAFF_ABSENCE : "absent on"
+  TIMETABLE_SLOT ||--o{ SUBSTITUTION : "covered by (per date)"
+  STAFF ||--o{ SUBSTITUTION : substitutes
+  STAFF_ABSENCE |o--o{ SUBSTITUTION : causes
+  ACADEMIC_YEAR ||--o{ CALENDAR_EVENT : contains
+  CALENDAR_EVENT ||--o{ CALENDAR_EVENT_SCOPE : "scoped by"
+  CALENDAR_EVENT |o--o{ CALENDAR_EVENT : "recurrence of"
+  STUDENT_ENROLMENT ||--o{ STUDENT_ATTENDANCE : has
+  CLASS_SECTION ||--o{ STUDENT_ATTENDANCE : "taken in"
+  PERIOD |o--o{ STUDENT_ATTENDANCE : "period-wise (optional)"
+  USER ||--o{ STUDENT_ATTENDANCE : marks
