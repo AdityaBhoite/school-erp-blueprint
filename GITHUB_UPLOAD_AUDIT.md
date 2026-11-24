@@ -89,3 +89,18 @@ The copied documentation includes the final documentation erratum and all correc
 - Staged tree re-scanned at the value level: clean.
 - Tracked set reviewed: no sensitive file tracked; nothing of ours accidentally ignored.
 - No file exceeds size limits (largest ~1.57 MB; GitHub's warning threshold is 50 MB).
+
+## 7. Post-upload additions — continuation phase (2026-11-24)
+
+After the Stage 1 upload, the project continuation assessment added **forward-planning documents only** (no new research, no reconnection to Eduvate):
+
+| Added / changed | File | Nature |
+|---|---|---|
+| Added | `CONTINUATION_ASSESSMENT.md` | Stage-1 verification, Eduvate gap register, access requirements, next milestones |
+| Changed | `02_EXISTING_BUILD/README.md` | Stage 2 analysis framework (read-only method, 12 dimensions, outputs) |
+| Changed | `03_COMPARATIVE_ANALYSIS/README.md` | Stage 3 comparative framework (10 dimensions, 7-way classification, template) |
+| Changed | `PROJECT_ROADMAP.md`, `README.md`, `04_NEW_PRODUCT/README.md` | Aligned to the agreed 5-stage model |
+
+- **Privacy posture unchanged — clean.** These are the project's own written analysis citing research document names, figures, application route paths, and role-level numbers already present throughout `01_EDUVATE_RESEARCH/`. No credentials, tokens, emails, personal data, or proprietary source were introduced.
+- **Manifest regenerated** to cover the new/changed content. New tracked total: **136** (134 content + this audit + the manifest). The manifest header and all unchanged entries are byte-identical; only the six affected rows changed. Hashes are computed on the committed (LF) content and verified to match the git blobs.
+- This section records a documentation/planning update; the Stage 1 upload record in §1–§6 is unchanged.
